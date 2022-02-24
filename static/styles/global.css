@@ -1,0 +1,18 @@
+@import "fonts.css";
+@import "palette.css";
+
+:root {
+	--font-mono: "Space Mono", monospace;
+}
+
+html {
+	font-family: "Inter", sans-serif;
+	font-size: 1rem;
+}
+
+body {
+	background: var(--color-bg);
+	color: var(--color-text);
+
+	transition: all ease-out 150ms;
+}

@@ -1,7 +1,14 @@
-<nav>
-	<a href="/">Home</a>
-	<a href="/users">Users</a>
-	<a href="/blog">Blog</a>
-</nav>
+<script>
+	import Nav from "$lib/components/Nav.svelte";
+</script>
 
-<slot />
+<Nav />
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		margin-top: var(--nav-height);
+	}
+</style>
