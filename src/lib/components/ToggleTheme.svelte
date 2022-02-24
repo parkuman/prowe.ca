@@ -41,7 +41,7 @@
 			localStorage.setItem(LOCAL_STORAGE_KEY, stored === THEMES.DARK ? THEMES.LIGHT : THEMES.DARK);
 		} else {
 			// the user hasn't specifically set the theme on the site (only on their OS), store opposite of preference
-			localStorage.setItem(LOCAL_STORAGE_KEY, prefersDarkTheme() ? THEMES.DARK : THEMES.LIGHT);
+			localStorage.setItem(LOCAL_STORAGE_KEY, prefersDarkTheme() ? THEMES.LIGHT : THEMES.DARK);
 		}
 
 		applyTheme();
@@ -52,7 +52,7 @@
 
 		// if a theme is set in localStorage, use that. otherwise use the
 		// preference provided by the browser (usually set by OS)
-		const currentTheme = localStorage.getItem(LOCAL_STORAGE_KEY) ?? preferredTheme;
+		let currentTheme = localStorage.getItem(LOCAL_STORAGE_KEY) ?? preferredTheme;
 
 		// local state to see if its currently dark mode
 		isDarkMode = currentTheme === THEMES.DARK;
