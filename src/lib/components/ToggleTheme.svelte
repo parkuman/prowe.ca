@@ -71,5 +71,91 @@
 	<meta content={isDarkMode ? "#ffffff" : "#131418"} name="theme-color" />
 </svelte:head>
 
-<span class="aria-label">{isDarkMode ? THEMES.DARK : THEMES.LIGHT} mode</span>
-<input type="checkbox" on:click={toggleTheme} bind:checked={isDarkMode} />
+<label
+	aria-label="switch to {isDarkMode ? THEMES.LIGHT : THEMES.DARK} mode"
+	title="switch to {isDarkMode ? THEMES.LIGHT : THEMES.DARK} mode"
+>
+	<input type="checkbox" on:click={toggleTheme} bind:checked={isDarkMode} />
+	<span class="toggle" />
+</label>
+
+<style>
+	label {
+		padding: 0;
+		display: flex;
+		align-items: center;
+		background: transparent;
+		border: none;
+		box-sizing: border-box;
+		--toggle-height: 20px;
+	}
+
+	input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+	}
+
+	.toggle,
+	.toggle::after,
+	.toggle::before {
+		transition: var(--transition);
+	}
+
+	.toggle {
+		position: relative;
+		display: inline-block;
+		width: calc(var(--toggle-height) * 2);
+		height: var(--toggle-height);
+		margin: 0;
+		background-color: #404346;
+		color: #404346;
+		border-radius: var(--toggle-height);
+		cursor: pointer;
+	}
+
+	input:checked ~ .toggle {
+		color: white;
+		background-color: white;
+	}
+
+	.toggle::after {
+		position: absolute;
+		top: 3px;
+		left: calc(var(--toggle-height) + 3px);
+		width: calc(var(--toggle-height) - 6px);
+		height: calc(var(--toggle-height) - 6px);
+		background-color: white;
+		border-radius: var(--toggle-height);
+		content: "";
+	}
+
+	input:checked ~ .toggle::after {
+		left: 3px;
+		background-color: #404346;
+	}
+
+	.toggle::before {
+		z-index: 2;
+		content: "";
+		top: 2px;
+		right: 8px;
+		width: 1px;
+		height: 1px;
+		display: block;
+		position: absolute;
+		border-radius: 0.5px;
+		background-color: none;
+	}
+	input:checked ~ .toggle::before {
+		top: 1px;
+		right: 15px;
+
+		width: calc(var(--toggle-height) - 3px);
+		height: calc(var(--toggle-height) - 7px);
+		border-radius: 7px;
+		background-color: white;
+	}
+</style>

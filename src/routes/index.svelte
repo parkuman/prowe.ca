@@ -2,4 +2,14 @@
 	<title>Home | Parker Rowe</title>
 </svelte:head>
 
-<h1>Hello and welcome to my site!</h1>
+<section class="hero">
+	<h3>HI👋 I'M,</h3>
+</section>
+
+<style>
+	.hero {
+		margin: 0 auto;
+		height: 100vh;
+		max-width: 70%;
+	}
+</style>

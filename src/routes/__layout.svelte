@@ -9,6 +9,8 @@
 
 <style>
 	main {
+		margin: 0 auto;
 		margin-top: var(--nav-height);
+		max-width: var(--max-width);
 	}
 </style>

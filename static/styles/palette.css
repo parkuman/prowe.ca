@@ -6,7 +6,9 @@
 }
 
 body.light {
-	--primary-color: blue;
+	--primary-color-rgb: 0, 0, 255;
+	--primary-color: rgb(var(--primary-color-rgb));
+	--secondary-color: blue;
 	--color-bg: var(--color-bg-light);
 	--color-text: var(--color-text-light);
 	color-scheme: light;
@@ -15,7 +17,9 @@ body.light {
 @media (prefers-color-scheme: dark) {
 	/* if the user prefers color scheme dark, select the body that isn't .light */
 	body:not(.light) {
-		--primary-color: yellow;
+		--primary-color-rgb: 255, 255, 0;
+		--primary-color: rgb(var(--primary-color-rgb));
+		--secondary-color: yellow;
 		--color-bg: var(--color-bg-dark);
 		--color-text: var(--color-text-dark);
 		color-scheme: dark;
@@ -24,7 +28,9 @@ body.light {
 
 /* same applies if the body sinply has the class name .dark */
 body.dark {
-	--primary-color: yellow;
+	--primary-color-rgb: 255, 255, 0;
+	--primary-color: rgb(var(--primary-color-rgb));
+	--secondary-color: yellow;
 	--color-bg: var(--color-bg-dark);
 	--color-text: var(--color-text-dark);
 	color-scheme: dark;

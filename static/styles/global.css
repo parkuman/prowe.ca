@@ -1,8 +1,16 @@
 @import "fonts.css";
 @import "palette.css";
+@import "transitions.css";
 
 :root {
 	--font-mono: "Space Mono", monospace;
+	--max-width: 95vw;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 html {
@@ -14,5 +22,14 @@ body {
 	background: var(--color-bg);
 	color: var(--color-text);
 
-	transition: all ease-out 150ms;
+	transition: all var(--transition);
+}
+
+::selection {
+	background-color: var(--secondary-color);
+}
+
+:focus-visible {
+	box-shadow: 0 0 0 4px var(--secondary-color);
+	outline: none;
 }
