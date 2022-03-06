@@ -14,6 +14,7 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@types/three": "^0.138.0",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^7.32.0",
@@ -29,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
-    "better-sqlite3": "^7.5.0"
+    "svelte-cubed": "^0.2.1",
+    "three": "^0.138.3"
   }
 }

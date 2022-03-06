@@ -137,6 +137,18 @@
 		background-color: #404346;
 	}
 
+	.toggle:hover {
+		background-color: #202122;
+	}
+
+	input:checked ~ .toggle:hover {
+		background-color: rgb(202, 202, 202);
+	}
+
+	input:checked ~ .toggle:hover:before {
+		background-color: rgb(202, 202, 202);
+	}
+
 	.toggle::before {
 		z-index: 2;
 		content: "";
@@ -146,16 +158,15 @@
 		height: 1px;
 		display: block;
 		position: absolute;
-		border-radius: 0.5px;
+		border-radius: var(--toggle-height);
 		background-color: none;
 	}
 	input:checked ~ .toggle::before {
 		top: 1px;
 		right: 15px;
-
 		width: calc(var(--toggle-height) - 3px);
 		height: calc(var(--toggle-height) - 7px);
-		border-radius: 7px;
+		border-radius: var(--toggle-height);
 		background-color: white;
 	}
 </style>

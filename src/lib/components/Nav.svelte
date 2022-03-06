@@ -1,12 +1,15 @@
 <script>
+	import { page } from "$app/stores";
 	import navLinks from "$lib/navLinks";
 	import ToggleTheme from "./ToggleTheme.svelte";
+
+	let yPos;
 </script>
 
-<nav>
+<nav class={yPos > 10 ? "scroll" : ""}>
 	<!-- logo -->
-	<a href="/">
-		<img src="/images/logo.png" alt="logo" />
+	<a href="/" title="navigate home">
+		<img src="/images/logo.svg" alt="logo" />
 	</a>
 
 	<!-- navlinks -->
@@ -14,9 +17,12 @@
 		<li>
 			<ToggleTheme />
 		</li>
-		{#each navLinks as navLink}
+		{#each navLinks as navLink, i}
 			<li>
-				<a href={navLink.href}>{navLink.text}</a>
+				<span>{String(i + 1).padStart(2, "0")}.</span>
+				<a rel="prefetch" href={navLink.href} aria-current={$page.params.slug === navLink.text}
+					>{navLink.text}</a
+				>
 			</li>
 		{/each}
 		<li>
@@ -27,10 +33,16 @@
 	</ul>
 </nav>
 
+<svelte:window bind:scrollY={yPos} />
+
 <style>
 	:root {
-		--nav-height: 70px;
+		--nav-height: 90px;
 		--nav-item-padding: 20px;
+	}
+
+	nav.scroll {
+		--nav-height: 70px;
 	}
 
 	nav {
@@ -39,13 +51,20 @@
 		left: 0;
 		width: 100vw;
 		height: var(--nav-height);
-		background-color: var(--bg);
 		color: var(--text);
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
 		padding: 0 calc((100vw - var(--max-width)) / 2);
+		font-weight: 500;
+		letter-spacing: 0.07rem;
+		transition: var(--transition);
+	}
+
+	nav.scroll {
+		background-color: var(--color-bg);
+		box-shadow: rgba(var(--primary-color-rgb), 0.07) 0px 5px 15px;
 	}
 
 	ul {
@@ -67,28 +86,25 @@
 		padding-right: 0;
 	}
 
+	li > span {
+		color: var(--primary-color);
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+	}
+
 	a {
 		text-decoration: none;
 		color: var(--color-text);
 	}
 
 	a:hover {
-		color: var(--secondary-color);
+		color: var(--primary-color);
 	}
 
 	button {
+		font-weight: 500;
+		letter-spacing: 0.07rem;
 		padding: 10px 20px;
-		cursor: pointer;
-		background: none;
-		border-style: solid;
-		border-width: 2px;
-		border-radius: 5px;
-		color: var(--primary-color);
-		border-color: var(--primary-color);
-	}
-
-	button:hover {
-		background-color: rgba(var(--primary-color-rgb), 0.1);
 	}
 
 	a,
