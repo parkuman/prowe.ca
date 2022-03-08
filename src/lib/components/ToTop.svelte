@@ -4,7 +4,7 @@
 	let yPos;
 </script>
 
-{#if yPos > 10}
+{#if yPos > 200}
 	<button
 		title="scroll to top"
 		on:click={() => {
@@ -20,10 +20,21 @@
 
 <style>
 	button {
+		--to-top-size: 40px;
 		position: fixed;
-		right: 10px;
-		bottom: 10px;
-		width: 40px;
-		height: 40px;
+		right: calc(100% / 2);
+		/* center the button by removing half its width */
+		margin-right: calc(-1 * var(--to-top-size) / 2);
+		bottom: 50px;
+		width: var(--to-top-size);
+		height: var(--to-top-size);
+	}
+
+	@media only screen and (max-width: 768px) {
+		button {
+			margin-right: 0;
+			right: 20px;
+			bottom: 20px;
+		}
 	}
 </style>

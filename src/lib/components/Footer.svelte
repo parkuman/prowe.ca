@@ -14,7 +14,9 @@
 		{/each}
 	</ul>
 	<ul class="right">
-		<a href="mailto:parker.a.rowe@gmail.com">parker.a.rowe@gmail.com</a>
+		<li>
+			<a href="mailto:parker.a.rowe@gmail.com">parker.a.rowe@gmail.com</a>
+		</li>
 	</ul>
 	<section>
 		<a target="_blank" href="https://github.com/parkuman/svelte-kit-test"
@@ -49,7 +51,7 @@
 		right: 0;
 	}
 
-	ul.right > a {
+	ul.right > li > a {
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
 		letter-spacing: 0.07rem;
@@ -69,14 +71,14 @@
 		background-color: var(--color-text);
 	}
 
-	li {
+	ul.left > li {
 		display: inline;
 		padding: 10px;
 		transition: ease 300ms;
 		transform: scale(1.5);
 	}
 
-	li:hover {
+	ul.left > li:hover {
 		transform: scale(1.8);
 	}
 
@@ -94,7 +96,6 @@
 		text-align: center;
 	}
 
-	/* Small Devices, Tablets */
 	@media only screen and (max-width: 768px) {
 		footer {
 			display: flex;
@@ -107,7 +108,7 @@
 			flex-direction: row;
 		}
 
-		ul.right > a {
+		ul.right > li > a {
 			text-orientation: initial;
 			writing-mode: inherit;
 		}

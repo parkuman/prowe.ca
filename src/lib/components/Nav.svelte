@@ -6,7 +6,7 @@
 	let yPos;
 </script>
 
-<nav class={yPos > 10 ? "scroll" : ""}>
+<nav class={yPos > 200 ? "scroll" : ""}>
 	<!-- logo -->
 	<a href="/" title="navigate home">
 		<img src="/images/logo.svg" alt="logo" />
