@@ -1,7 +1,7 @@
 <script>
 	import { page } from "$app/stores";
 	import navLinks from "$lib/navLinks";
-	import ToggleTheme from "./ToggleTheme.svelte";
+	import ToggleTheme from "$components/ToggleTheme.svelte";
 
 	let yPos;
 </script>

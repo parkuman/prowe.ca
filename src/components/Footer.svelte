@@ -1,6 +1,6 @@
 <script>
 	import socials from "$lib/socials";
-	import Icon from "$lib/components/Icon.svelte";
+	import Icon from "$components/Icon.svelte";
 </script>
 
 <footer>
