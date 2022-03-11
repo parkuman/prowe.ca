@@ -1,6 +1,9 @@
 {
-  "name": "svelte-kit-demo",
+  "name": "prowe.ca",
+  "description": "My Personal Website",
+  "author": "Parker Rowe",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
