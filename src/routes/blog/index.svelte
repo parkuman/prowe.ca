@@ -1,9 +1,12 @@
 <script context="module">
+	export const prerender = true;
+
 	export const load = async ({ fetch }) => {
 		const blogResponse = await fetch("/api/blog.json");
 		const posts = await blogResponse.json();
 
 		return {
+			maxage: 60,
 			props: {
 				posts,
 			},

@@ -6,6 +6,7 @@
 		const post = await postReq.json();
 
 		return {
+			maxage: 60,
 			props: {
 				post,
 			},
