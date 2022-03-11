@@ -1,10 +1,11 @@
 <script context="module">
+	export const prerender = true;
+
 	export const load = async ({ fetch, params }) => {
 		const postReq = await fetch(`/api/blog/${params.slug}.json`);
 		const post = await postReq.json();
 
 		return {
-			maxage: 60,
 			props: {
 				post,
 			},
