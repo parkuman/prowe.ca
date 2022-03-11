@@ -14,13 +14,11 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "@types/three": "^0.138.0",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.1",
-    "mdsvex": "^0.10.5",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.44.0",
@@ -31,7 +29,13 @@
   },
   "type": "module",
   "dependencies": {
-    "svelte-cubed": "^0.2.1",
-    "three": "^0.138.3"
+    "@notionhq/client": "^1.0.2",
+    "notion-to-md": "^2.3.2",
+    "rehype-highlight": "^5.0.2",
+    "rehype-stringify": "^9.0.3",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "unified": "^10.1.2"
   }
 }

@@ -11,3 +11,9 @@ declare namespace App {
 
 	interface Stuff {}
 }
+
+/// <reference types="vite/client" />
+interface ImportMetaEnv {
+	VITE_NOTION_API_KEY: string;
+	VITE_NOTION_BLOG_DB: string;
+}
