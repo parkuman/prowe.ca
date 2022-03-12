@@ -3,7 +3,10 @@ export type PostFrontmatter = {
 	slug: string;
 	date: string;
 	author: string;
-	tags: string[];
+	tags: Array<{
+		name: string;
+		color: string;
+	}>;
 };
 
 type BlogPost = {

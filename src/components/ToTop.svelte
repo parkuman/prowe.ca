@@ -25,9 +25,14 @@
 		right: calc(100% / 2);
 		/* center the button by removing half its width */
 		margin-right: calc(-1 * var(--to-top-size) / 2);
-		bottom: 50px;
+		bottom: 100px;
 		width: var(--to-top-size);
 		height: var(--to-top-size);
+		opacity: 30%;
+	}
+
+	button:hover {
+		opacity: 100%;
 	}
 
 	@media only screen and (max-width: 768px) {

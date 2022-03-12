@@ -16,4 +16,8 @@ declare namespace App {
 interface ImportMetaEnv {
 	VITE_NOTION_API_KEY: string;
 	VITE_NOTION_BLOG_DB: string;
+
+	VITE_SPOTIFY_CLIENT_ID: string;
+	VITE_SPOTIFY_CLIENT_SECRET: string;
+	VITE_SPOTIFY_REFRESH_TOKEN: string;
 }

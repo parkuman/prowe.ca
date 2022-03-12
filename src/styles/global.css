@@ -4,7 +4,7 @@
 
 :root {
 	--font-mono: "Space Mono", monospace;
-	--max-width: 70vw;
+	--max-width: 80vw;
 	--border-radius: 5px;
 }
 
@@ -33,13 +33,13 @@ button {
 	border-style: solid;
 	border-width: 2px;
 	border-radius: var(--border-radius);
-	color: var(--primary-color);
-	border-color: var(--primary-color);
+	color: var(--color-primary);
+	border-color: var(--color-primary);
 	transition: var(--transition);
 }
 
 button:hover {
-	background-color: rgba(var(--primary-color-rgb), 0.1);
+	background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 
 ::selection {

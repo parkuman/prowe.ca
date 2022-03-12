@@ -4,6 +4,8 @@
 	import ToggleTheme from "$components/ToggleTheme.svelte";
 
 	let yPos;
+
+	export let currentPage;
 </script>
 
 <nav class={yPos > 200 ? "scroll" : ""}>
@@ -20,9 +22,9 @@
 		{#each navLinks as navLink, i}
 			<li>
 				<span>{String(i + 1).padStart(2, "0")}.</span>
-				<a rel="prefetch" href={navLink.href} aria-current={$page.params.slug === navLink.text}
-					>{navLink.text}</a
-				>
+				<a rel="prefetch" href={navLink.href} aria-current={currentPage === navLink.href}>
+					{navLink.text}
+				</a>
 			</li>
 		{/each}
 		<li>
@@ -64,7 +66,7 @@
 
 	nav.scroll {
 		background-color: var(--color-bg);
-		box-shadow: rgba(var(--primary-color-rgb), 0.07) 0px 5px 15px;
+		box-shadow: rgba(var(--color-primary-rgb), 0.07) 0px 5px 15px;
 	}
 
 	ul {
@@ -80,6 +82,8 @@
 	li {
 		padding: 0 var(--nav-item-padding);
 		display: inline-block;
+		transition: var(--transition);
+		border-radius: var(--border-radius);
 	}
 
 	li:last-of-type {
@@ -87,7 +91,7 @@
 	}
 
 	li > span {
-		color: var(--primary-color);
+		color: var(--color-primary);
 		font-family: var(--font-mono);
 		font-size: 0.8rem;
 	}
@@ -98,7 +102,7 @@
 	}
 
 	a:hover {
-		color: var(--primary-color);
+		color: var(--color-primary);
 	}
 
 	button {
@@ -121,5 +125,15 @@
 
 	:global(body.dark) img {
 		filter: invert(100%);
+	}
+
+	[aria-current]:not([aria-current="false"]) {
+		color: var(--color-primary);
+	}
+
+	@media only screen and (max-width: 768px) {
+		nav {
+			padding: 0 2vw;
+		}
 	}
 </style>

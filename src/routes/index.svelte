@@ -41,7 +41,7 @@
 	.hero p {
 		font-weight: bold;
 		font-style: italic;
-		color: var(--primary-color);
+		color: var(--color-primary);
 	}
 	.hero h1 {
 		align-self: center;

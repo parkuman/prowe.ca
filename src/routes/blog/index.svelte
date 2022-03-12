@@ -25,7 +25,7 @@
 
 <h1>Blog</h1>
 
-{#if posts && posts.length > 0}
+{#if posts.length}
 	<ul>
 		{#each posts as post}
 			<li>

@@ -1,9 +1,11 @@
 <script>
 	import socials from "$lib/socials";
 	import Icon from "$components/Icon.svelte";
+	import NowPlaying from "$components/NowPlaying.svelte";
 </script>
 
 <footer>
+	<NowPlaying />
 	<ul class="left">
 		{#each socials as social}
 			<li>
@@ -19,8 +21,10 @@
 		</li>
 	</ul>
 	<section>
-		<a target="_blank" href="https://github.com/parkuman/svelte-kit-test"
-			>Made with <Icon name="heart" /> by Parker Rowe</a
+		<a
+			target="_blank"
+			href="https://github.com/parkuman/svelte-kit-test"
+			title="visit this project on GitHub">Made with <Icon name="heart" /> by Parker Rowe</a
 		>
 	</section>
 </footer>
@@ -43,7 +47,7 @@
 		align-items: center;
 		padding: 0 calc((100vw - var(--max-width)) / 2);
 		margin: 0;
-		color: var(--primary-color);
+		color: var(--color-primary);
 		transition: var(--transition);
 	}
 
@@ -83,13 +87,24 @@
 	}
 
 	a {
-		color: var(--color-text);
-		transition: var(--transition);
 		text-decoration: none;
+		color: var(--color-text);
+		padding: 5px;
+		transition: var(--transition);
+		border-radius: var(--border-radius);
 	}
 
 	a:hover {
-		color: var(--primary-color);
+		background-color: rgb(var(--color-primary-rgb), 0.3);
+	}
+
+	li > a {
+		padding: 0;
+	}
+
+	li > a:hover {
+		background-color: transparent;
+		color: var(--color-primary);
 	}
 
 	section {

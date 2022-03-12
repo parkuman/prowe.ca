@@ -25,10 +25,15 @@ export function getPropertyValue(property: string, notionPageRes: NotionPageResp
 			return propertyValue.start;
 		case "multi_select": // Array<SelectPropertyResponse>
 			// extracts just the names of each tag and returns them as an array of strings
-			return propertyValue.map((select) => select.name);
+			return propertyValue.map((select) => {
+				return {
+					name: select.name,
+					color: select.color,
+				};
+			});
 	}
 
-  // default to just returning the property value otherwise
+	// default to just returning the property value otherwise
 	return propertyValue;
 }
 
