@@ -1,0 +1,292 @@
+/* 
+COLOR PALETTE
+https://coolors.co/08415c-cc2936-ebbab9-d0ccd0-fbfcff
+#08415C - DARK IMPERIAL BLUE
+#CC2936 - MADDER LAKE
+#EBBAB9 - SPANISH PINK
+#D0CCD0 - LIGHT GRAY 
+#FBFCFF - WHITE
+#343434 - GRAY TEXT COLOR
+*/
+
+
+/* GLOBAL STYLES
+-------------------------------------------- */
+
+
+/* fix for padding affecting a content's width */
+
+html {
+    box-sizing: border-box;
+}
+
+
+/* fix for overflow issues */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* fix for in-page naviagtion, so content isnt hidden begind header navbar */
+
+:target:before {
+    content: "";
+    display: block;
+    height: 30px;
+    /* fixed header height*/
+    margin: -30px 0 0;
+    /* negative fixed header height */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 3rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+.content-wrap {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+
+/* Profile
+-------------------------------------------- */
+
+.profile {
+    padding-top: 80px;
+    color: #FBFCFF;
+    background-color: #08415C;
+}
+
+
+/* Projects
+-------------------------------------------- */
+
+.projects {
+    background-color: #FBFCFF;
+}
+
+.projects a {
+    text-decoration: none;
+}
+
+.projects .btn {
+    color: white;
+    background: #CC2936;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.projects .btn:hover {
+    background: rgba(204, 41, 54, 0.8);
+}
+
+.projects .btn-github {
+    background: black;
+}
+
+.projects .btn-github:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.projects .btn img {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+}
+
+.project-item {
+    overflow: hidden;
+    padding: 25px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.project-item img {
+    width: 300px;
+}
+
+
+/* Experience
+-------------------------------------------- */
+
+.work-experience {
+    background-color: #D0CCD0;
+}
+
+.work-experience-flex-container {
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LI-profile-badge {
+    background-color: white;
+}
+
+.resume-btn {
+    color: white;
+    font-size: 30px;
+    background: #08415C;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.resume-btn a {
+    color: white;
+}
+
+.resume-btn:hover {
+    background: rgba(8, 65, 92, 0.8);
+}
+
+
+/* Education
+-------------------------------------------- */
+
+.education {
+    background-color: #FBFCFF;
+}
+
+
+/* Contact Info
+-------------------------------------------- */
+
+footer {
+    background: rgb(58, 58, 58);
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.contact-list a {
+    display: inline-block;
+    padding: 15px;
+}
+
+
+/* Navbar
+-------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #08415C;
+    max-height: 70px;
+    width: 100%;
+}
+
+.navbar a {
+    color: #FBFCFF;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #FFFFFF;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-list {
+    display: none;
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+
+/* Responsive
+-------------------------------------------- */
+
+
+/* Specific for layouts larger than 480px */
+
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .project-item img {
+        float: left;
+        margin-right: 30px;
+    }
+    .work-experience-flex-container {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .education-flex-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        justify-content: center;
+    }
+    .nav-list {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+    }
+    .navbar {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: #08415C;
+        max-height: 70px;
+        width: 100%;
+    }
+    .profile,
+    footer {
+        text-align: center;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700|Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/flash_cards.css">
+    <script type="text/javascript" src="js/flashcard.js" defer></script>
+    <meta name="theme-color" content="#08415C">
+    <link rel="icon" href="/images/face.png">
+    <title>ELEC 279 Flash Card Studying</title>
+
+</head>
+
+<body>
+    <header class="navbar">
+        <img class="nav-logo" href="/" src="/images/face.png" width="512" height="512">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="/" onclick="">Home</a>
+            </li>
+
+        </ul>
+    </header>
+
+    <section class="content-wrap flash-card-zone">
+        <h1>ELEC279 Flash Cards</h1>
+        <p>Click the card to see the answer!</p>
+
+        <div class="game-flex">
+            <div class="flip-scene">
+                <div class="flashcard">
+                    <div class="flashcard-face flashcard-face-front">
+
+                        <!-- autofilled by js -->
+                    </div>
+                    <div class="flashcard-face flashcard-face-back">
+                        <!-- autofilled by js -->
+                    </div>
+                </div>
+            </div>
+
+            <p class="front-back-indicator"></p>
+
+            <div class="controls">
+                <img class="prev-arrow" width="40" height="40" src="images/left-arrow.svg">
+                <p class="flash-control-counter">~ / ~</p>
+                <img class="next-arrow" width="40" height="40" src="images/right-arrow.svg">
+            </div>
+        </div>
+    </section>
+</body>

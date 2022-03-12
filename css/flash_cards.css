@@ -1,0 +1,172 @@
+/* 
+COLOR PALETTE
+https://coolors.co/08415c-cc2936-ebbab9-d0ccd0-fbfcff
+#08415C - DARK IMPERIAL BLUE
+#CC2936 - MADDER LAKE
+#EBBAB9 - SPANISH PINK
+#D0CCD0 - LIGHT GRAY 
+#FBFCFF - WHITE
+#343434 - GRAY TEXT COLOR
+*/
+
+
+/* GLOBAL STYLES
+-------------------------------------------- */
+
+
+/* fix for padding affecting a content's width */
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+/* fix for overflow issues */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* fix for in-page naviagtion, so content isnt hidden begind header navbar */
+
+:target:before {
+    content: "";
+    display: block;
+    height: 30px;
+    /* fixed header height*/
+    margin: -30px 0 0;
+    /* negative fixed header height */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.content-wrap {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+
+/* FLASH CARD
+--------------------------------------------- */
+
+.flash-card-zone {
+    margin-top: 40px;
+}
+
+.game-flex {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flash-card {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 24rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+}
+
+.prev-arrow,
+.next-arrow {
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.flip-scene {
+    width: 95%;
+    height: 24rem;
+    perspective: 600px;
+}
+
+.flashcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.flashcard.is-flipped {
+    transform: rotateX(180deg);
+}
+
+.flashcard-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flashcard-face-back {
+    transform: rotateX(180deg);
+}
+
+
+/* Responsive
+-------------------------------------------- */
+
+
+/* Specific for layouts larger than 480px */
+
+@media screen and (min-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .flip-scene {
+        width: 70%;
+        height: 24rem;
+    }
+}
