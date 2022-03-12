@@ -5,6 +5,7 @@
 :root {
 	--font-mono: "Space Mono", monospace;
 	--max-width: 80vw;
+	--max-content-width: 70vw;
 	--border-radius: 5px;
 }
 

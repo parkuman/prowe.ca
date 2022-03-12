@@ -26,6 +26,6 @@
 	main {
 		margin: 0 auto;
 		margin-top: var(--nav-height);
-		max-width: calc(var(--max-width));
+		max-width: var(--max-content-width);
 	}
 </style>
