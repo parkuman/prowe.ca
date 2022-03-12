@@ -79,7 +79,7 @@ const Footer = () => (
             <a href={"mailto: " + config.email}>{config.email}</a>
         </StyledContactInfo>
         <StyledFooter>
-            <a href={config.github + "/site-V2"}>
+            <a href={config.github + "/prowe.ca/tree/v2"}>
                 © {new Date().getFullYear()}, Built with ❤ by {config.name}
             </a>
         </StyledFooter>
