@@ -16,15 +16,16 @@ export function getPropertyValue(property: string, notionPageRes: NotionPageResp
 	switch (propertyType) {
 		case "rich_text": // Array<RichTextItemResponse>
 			// gets simply the first text for that property, no need for all the extra stuff
-			return propertyValue[0].plain_text;
+			return propertyValue[0]?.plain_text ?? "";
 		case "people": // Array<PartialUserObjectResponse>
 			// extracts only the first person in the list
-			return propertyValue[0].name;
+			return propertyValue[0]?.name ?? "";
 		case "date": // DateResponse | null
 			// gets just the start of the date
-			return propertyValue.start;
+			return propertyValue?.start ?? "";
 		case "multi_select": // Array<SelectPropertyResponse>
 			// extracts just the names of each tag and returns them as an array of strings
+			if (!propertyValue.length) return [];
 			return propertyValue.map((select) => {
 				return {
 					name: select.name,

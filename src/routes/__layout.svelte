@@ -19,8 +19,8 @@
 <main>
 	<slot />
 	<ToTop />
+	<Footer />
 </main>
-<Footer />
 
 <style>
 	main {

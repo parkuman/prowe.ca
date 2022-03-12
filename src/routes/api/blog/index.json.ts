@@ -26,6 +26,7 @@ export const get = async () => {
 		const postFrontmatters = blogPostQuery.results.map((post) => {
 			const frontmatter: PostFrontmatter = {
 				title: getBlogPostProperty("title", post),
+				summary: getBlogPostProperty("summary", post),
 				slug: getBlogPostProperty("slug", post),
 				author: getBlogPostProperty("author", post),
 				date: getBlogPostProperty("date", post),

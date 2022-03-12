@@ -1,15 +1,5 @@
 <script lang="ts">
-	type TagColor =
-		| "default"
-		| "gray"
-		| "brown"
-		| "orange"
-		| "yellow"
-		| "green"
-		| "blue"
-		| "purple"
-		| "pink"
-		| "red";
+	import type TagColor from "$types/TagColor";
 
 	export let text: string;
 	export let color: TagColor = "default";

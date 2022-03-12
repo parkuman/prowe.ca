@@ -35,6 +35,7 @@
 					</a>
 				</h2>
 				Published {post.date}
+				<p>{post.summary}</p>
 			</li>
 		{/each}
 	</ul>

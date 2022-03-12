@@ -15,12 +15,11 @@
 <p>
 	{#if data && data?.isPlaying}
 		<a target="_blank" href={data.songUrl} title="open song on Spotify">
-			<Icon name="spotify" />
-			<b>{data.title}</b> - {data.artist}
+			<span><Icon name="spotify" width="1.5rem" height="1.5rem" /></span> <b>{data.title}</b> - {data.artist}
 		</a>
 	{:else}
 		<a href="https://open.spotify.com/user/parkuman" title="check out my profile!">
-			<Icon name="spotify" />
+			<Icon name="spotify" width="1.5rem" height="1.5rem" />
 			<b>Not Listening</b> - Spotify
 		</a>
 	{/if}
@@ -42,5 +41,11 @@
 
 	a:hover {
 		background-color: rgb(var(--color-primary-rgb), 0.3);
+	}
+
+	span {
+		display: inline-block;
+		margin-right: 10px;
+		transform: translateY(5px);
 	}
 </style>

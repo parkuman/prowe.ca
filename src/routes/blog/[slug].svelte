@@ -18,6 +18,8 @@
 	import "$styles/blogpost.css";
 	import { page } from "$app/stores";
 	import type BlogPost from "$types/BlogPost";
+	import Tag from "$components/Tag.svelte";
+
 	export let post: BlogPost;
 </script>
 
@@ -25,4 +27,22 @@
 	<title>{$page.params.slug} - Blog | Parker Rowe</title>
 </svelte:head>
 
-{@html post.content}
+<article>
+	<header>
+		<h1>{post.frontmatter.title}</h1>
+		<p>{post.frontmatter.author}</p>
+		<p>{post.frontmatter.date}</p>
+		<ul>
+			{#each post.frontmatter.tags as tag}
+				<Tag text={tag.name} color={tag.color} href={`/tags/${tag.name}`} />
+			{/each}
+		</ul>
+	</header>
+	{@html post.content}
+</article>
+
+<style>
+	header {
+		margin-bottom: 100px;
+	}
+</style>

@@ -1,7 +1,25 @@
 <aside>
 	<nav>
-		<p>Check out our other blog posts</p>
+		<h1>RECENT BLOG POSTS</h1>
+		<ul>
+			<li>pp</li>
+			<li>pp</li>
+		</ul>
 	</nav>
 </aside>
 
 <slot />
+
+<style>
+	aside {
+		position: absolute;
+		left: 100px;
+		top: calc(var(--nav-height) + 200px);
+	}
+
+	@media only screen and (max-width: 768px) {
+		aside {
+			display: none;
+		}
+	}
+</style>

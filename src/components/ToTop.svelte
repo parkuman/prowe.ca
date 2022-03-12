@@ -12,7 +12,7 @@
 		}}
 		transition:fly={{ y: 20, duration: 300 }}
 	>
-		<Icon name="chevrons-up" />
+		<Icon name="chevrons-up" width="1.5rem" height="1.5rem" />
 	</button>
 {/if}
 
@@ -40,6 +40,7 @@
 			margin-right: 0;
 			right: 20px;
 			bottom: 20px;
+			opacity: 100%;
 		}
 	}
 </style>

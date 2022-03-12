@@ -10,7 +10,7 @@
 		{#each socials as social}
 			<li>
 				<a target="_blank" href={social.href} title={social.name}>
-					<Icon name={social.name.toLowerCase()} />
+					<Icon name={social.name.toLowerCase()} width="25px" height="25px" />
 				</a>
 			</li>
 		{/each}
@@ -36,6 +36,7 @@
 		padding: 10px 0;
 		font-family: var(--font-mono);
 		margin: 0 auto;
+		margin-top: 100px;
 	}
 
 	ul {
@@ -60,8 +61,7 @@
 		text-orientation: mixed;
 		letter-spacing: 0.07rem;
 		margin-bottom: 10px;
-		position: relative;
-		left: 3px;
+		transform: translateX(3px);
 	}
 
 	ul.left {
@@ -79,11 +79,10 @@
 		display: inline;
 		padding: 10px;
 		transition: ease 300ms;
-		transform: scale(1.5);
 	}
 
 	ul.left > li:hover {
-		transform: scale(1.8);
+		transform: scale(1.2);
 	}
 
 	a {
@@ -109,6 +108,7 @@
 
 	section {
 		text-align: center;
+		margin-top: 20px;
 	}
 
 	@media only screen and (max-width: 768px) {
@@ -119,7 +119,7 @@
 		}
 
 		ul {
-			position: inherit;
+			position: unset;
 			flex-direction: row;
 		}
 
