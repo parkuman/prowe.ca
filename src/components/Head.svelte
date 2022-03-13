@@ -4,7 +4,7 @@
 
 	export let title = metadata.title;
 	export let description = metadata.description;
-	export let image = "/images/preview.webp";
+	export let image = "/images/preview.png";
 	export let type = "website";
 	export let date: string = null;
 	export let author: string = null;
