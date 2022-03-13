@@ -39,8 +39,8 @@
 		<ul class={isMenuOpen ? "mobile-open" : "mobile-closed"}>
 			{#each navLinks as navLink, i}
 				<li>
-					<span>{String(i + 1).padStart(2, "0")}.</span>
 					<a rel="prefetch" href={navLink.href} aria-current={currentPage === navLink.href}>
+						<span>{String(i + 1).padStart(2, "0")}.</span>
 						{navLink.text}
 					</a>
 				</li>
@@ -115,7 +115,8 @@
 		padding-right: 0;
 	}
 
-	li > span {
+	a > span {
+		display: inline;
 		color: var(--color-primary);
 		font-family: var(--font-mono);
 		font-size: 0.8rem;
@@ -247,16 +248,22 @@
 			opacity: 100;
 		}
 
-		ul.mobile-open > li {
-			display: block;
-			padding: 40px 0;
+		li {
+			display: flex;
 			border-radius: 0;
+			padding: 0;
 			width: 100%;
 			border-bottom: 1px solid gray;
 		}
 
-		ul.mobile-open > li:last-of-type {
+		li:last-of-type {
 			border-bottom: none;
+		}
+
+		li > a {
+			width: 100%;
+			height: 100%;
+			padding: 40px 0;
 		}
 
 		a > button {

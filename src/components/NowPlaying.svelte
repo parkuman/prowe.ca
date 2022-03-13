@@ -19,8 +19,7 @@
 		</a>
 	{:else}
 		<a href="https://open.spotify.com/user/parkuman" title="check out my profile!">
-			<Icon name="spotify" width="1.5rem" height="1.5rem" />
-			<b>Not Listening</b> - Spotify
+			<span><Icon name="spotify" width="1.5rem" height="1.5rem" /></span> <b>Not Listening</b> - Spotify
 		</a>
 	{/if}
 </p>
@@ -44,8 +43,7 @@
 	}
 
 	span {
-		display: inline-block;
-		margin-right: 10px;
-		transform: translateY(5px);
+		display: inline;
+		margin-right: 8px;
 	}
 </style>
