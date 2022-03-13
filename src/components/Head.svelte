@@ -21,11 +21,11 @@
 	<meta property="og:site_name" content="Parker Rowe" />
 	<meta property="og:description" content={description} />
 	<meta property="og:title" content={title} />
-	<meta property="og:image" content={`${metadata.baseUrl}/static${image}`} />
+	<meta property="og:image" content={`${metadata.baseUrl}${image}`} />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={`${metadata.baseUrl}/static${image}`} />
+	<meta name="twitter:image" content={`${metadata.baseUrl}${image}`} />
 	{#if type === "article"}
 		{#if date}
 			<meta property="article:published_time" content={date} />
