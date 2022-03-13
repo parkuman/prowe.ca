@@ -1,6 +1,6 @@
 <script>
 	import { beforeNavigate } from "$app/navigation";
-	import navLinks from "$lib/navLinks";
+	import { navLinks } from "$lib/config";
 	import ToggleTheme from "$components/ToggleTheme.svelte";
 	import Icon from "$components/Icon.svelte";
 
@@ -9,7 +9,7 @@
 	let yPos;
 	let isMenuOpen = false;
 
-	// close the mobile menu when the user clicks on one of the items 
+	// close the mobile menu when the user clicks on one of the items
 	beforeNavigate(() => {
 		isMenuOpen = false;
 	});
