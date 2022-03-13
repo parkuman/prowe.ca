@@ -65,10 +65,12 @@ export const get = async ({ params }) => {
 
 		const frontmatter: PostFrontmatter = {
 			title: getBlogPostProperty("title", blogPostNotionResponse),
+			summary: getBlogPostProperty("summary", blogPostNotionResponse),
 			slug: getBlogPostProperty("slug", blogPostNotionResponse),
 			author: getBlogPostProperty("author", blogPostNotionResponse),
 			date: getBlogPostProperty("date", blogPostNotionResponse),
 			tags: getBlogPostProperty("tags", blogPostNotionResponse),
+			image: getBlogPostProperty("image", blogPostNotionResponse),
 		};
 
 		const blogPost: BlogPost = {

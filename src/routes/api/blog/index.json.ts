@@ -31,6 +31,7 @@ export const get = async () => {
 				author: getBlogPostProperty("author", post),
 				date: getBlogPostProperty("date", post),
 				tags: getBlogPostProperty("tags", post),
+				image: getBlogPostProperty("image", post),
 			};
 
 			return frontmatter;

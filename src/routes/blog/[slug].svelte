@@ -1,13 +1,14 @@
 <script context="module">
 	export const prerender = true;
 
-	export const load = async ({ fetch, params }) => {
+	export const load = async ({ fetch, params, url }) => {
 		const postReq = await fetch(`/api/blog/${params.slug}.json`);
 		const post = await postReq.json();
 
 		return {
 			props: {
 				post,
+				currentPage: url.pathname,
 			},
 		};
 	};
@@ -16,17 +17,22 @@
 <script lang="ts">
 	import "highlight.js/styles/github-dark.css";
 	import "$styles/blogpost.css";
-	import { page } from "$app/stores";
 	import type BlogPost from "$types/BlogPost";
 	import Tag from "$components/Tag.svelte";
+	import Head from "$components/Head.svelte";
 
 	export let post: BlogPost;
 </script>
 
-<svelte:head>
-	<title>{$page.params.slug} - Blog | Parker Rowe</title>
-</svelte:head>
-
+<Head
+	title={`${post.frontmatter.title} | Parker Rowe`}
+	description={post.frontmatter.summary}
+	image={post.frontmatter.image}
+	type="article"
+	date={post.frontmatter.date}
+	author={post.frontmatter.author}
+	tags={post.frontmatter.tags.map((tag) => tag.name)}
+/>
 <article>
 	<header>
 		<h1>{post.frontmatter.title}</h1>

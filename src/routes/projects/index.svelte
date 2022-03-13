@@ -2,8 +2,10 @@
 	export const prerender = true;
 </script>
 
-<svelte:head>
-	<title>Projects | Parker Rowe</title>
-</svelte:head>
+<script>
+	import Head from "$components/Head.svelte";
+</script>
+
+<Head title="Projects | Parker Rowe" />
 
 <h1>Projects</h1>

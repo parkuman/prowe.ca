@@ -3,11 +3,9 @@
 </script>
 
 <script>
-	import { page } from "$app/stores";
+	import Head from "$components/Head.svelte";
 </script>
 
-<svelte:head>
-	<title>{$page.params.slug} - Projects | Parker Rowe</title>
-</svelte:head>
+<Head title="Project X | Parker Rowe" />
 
 <h1>This is a project!</h1>

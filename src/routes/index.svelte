@@ -2,9 +2,11 @@
 	export const prerender = true;
 </script>
 
-<svelte:head>
-	<title>Parker Rowe - Engineer, Developer</title>
-</svelte:head>
+<script>
+	import Head from "$components/Head.svelte";
+</script>
+
+<Head />
 
 <section class="hero">
 	<p>HI 👋 I'M,</p>

@@ -23,13 +23,12 @@
 
 <script lang="ts">
 	import { page } from "$app/stores";
+	import Head from "$components/Head.svelte";
 
 	export let posts;
 </script>
 
-<svelte:head>
-	<title>{$page.params.tag} - Tag | Parker Rowe</title>
-</svelte:head>
+<Head title={`${$page.params.tag} tag | Parker Rowe`} />
 
 {#if posts.length}
 	<ul>

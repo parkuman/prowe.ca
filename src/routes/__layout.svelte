@@ -10,6 +10,7 @@
 	import Nav from "$components/Nav.svelte";
 	import Footer from "$components/Footer.svelte";
 	import ToTop from "$components/ToTop.svelte";
+
 	import "$styles/global.css";
 
 	export let currentPage;

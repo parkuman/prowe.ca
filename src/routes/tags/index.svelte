@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>tags | Parker Rowe</title>
+	<title>Tags | Parker Rowe</title>
 </svelte:head>
 
 <h1>All Tags</h1>

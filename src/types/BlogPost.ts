@@ -10,6 +10,7 @@ export type PostFrontmatter = {
 		name: string;
 		color: TagColor;
 	}>;
+	image: string;
 };
 
 type BlogPost = {

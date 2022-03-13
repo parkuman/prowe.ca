@@ -14,15 +14,13 @@
 </script>
 
 <script lang="ts">
+	import Head from "$components/Head.svelte";
 	import type { PostFrontmatter } from "$types/BlogPost";
 
 	export let posts: PostFrontmatter[];
 </script>
 
-<svelte:head>
-	<title>Blog | Parker Rowe</title>
-</svelte:head>
-
+<Head title="Blog | Parker Rowe" />
 <h1>Blog</h1>
 
 {#if posts.length}
