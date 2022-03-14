@@ -1,4 +1,4 @@
-<aside>
+<!-- <aside>
 	<nav>
 		<h1>RECENT BLOG POSTS</h1>
 		<ul>
@@ -6,7 +6,7 @@
 			<li>pp</li>
 		</ul>
 	</nav>
-</aside>
+</aside> -->
 
 <slot />
 
@@ -17,7 +17,7 @@
 		top: calc(var(--nav-height) + 200px);
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 992px) {
 		aside {
 			display: none;
 		}

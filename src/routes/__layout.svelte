@@ -19,13 +19,15 @@
 <Nav {currentPage} />
 <main>
 	<slot />
-	<ToTop />
-	<Footer />
 </main>
+<ToTop />
+<Footer />
 
 <style>
 	main {
 		margin: 0 auto;
+		position: relative;
+		z-index: 0;
 		margin-top: var(--nav-height);
 		max-width: var(--max-content-width);
 	}

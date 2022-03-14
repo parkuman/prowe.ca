@@ -36,7 +36,7 @@
 		padding: 10px 0;
 		font-family: var(--font-mono);
 		margin: 0 auto;
-		margin-top: 100px;
+		margin-top: 200px;
 	}
 
 	ul {
@@ -111,7 +111,7 @@
 		margin-top: 20px;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 992px) {
 		footer {
 			display: flex;
 			flex-direction: column;

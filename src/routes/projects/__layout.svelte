@@ -1,7 +1,7 @@
-<aside>
+<!-- <aside>
 	<nav>
 		<p>Check out my other projects: </p>
 	</nav>
-</aside>
+</aside> -->
 
 <slot />

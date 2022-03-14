@@ -68,6 +68,7 @@
 
 	header {
 		position: fixed;
+		z-index: 2;
 		top: 0;
 		left: 0;
 		width: 100vw;
@@ -81,6 +82,7 @@
 		font-weight: 500;
 		letter-spacing: 0.07rem;
 		transition: var(--transition);
+		background-color: var(--color-bg);
 	}
 
 	header.scroll {
@@ -164,7 +166,7 @@
 		display: none;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 992px) {
 		.logo {
 			display: none;
 		}
@@ -181,7 +183,6 @@
 			justify-content: flex-start;
 			align-items: flex-start;
 			padding: 0 calc((100vw - var(--max-width)) / 2);
-			position: absolute;
 			list-style: none;
 			background: var(--color-bg);
 			top: var(--nav-height);
@@ -192,6 +193,7 @@
 
 		ul.mobile-closed {
 			opacity: 0;
+			pointer-events: none;
 		}
 
 		nav {
@@ -246,6 +248,7 @@
 
 		ul.mobile-open {
 			opacity: 100;
+			overflow: hidden;
 		}
 
 		li {

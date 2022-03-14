@@ -1,6 +1,7 @@
 <script>
 	import { fly } from "svelte/transition";
-	import Icon from "./Icon.svelte";
+	import Icon from "$components/Icon.svelte";
+
 	let yPos;
 </script>
 
@@ -12,7 +13,7 @@
 		}}
 		transition:fly={{ y: 20, duration: 300 }}
 	>
-		<Icon name="chevrons-up" width="1.5rem" height="1.5rem" />
+		<Icon name="chevrons-up" width="15px" height="15px" />
 	</button>
 {/if}
 
@@ -35,7 +36,7 @@
 		opacity: 100%;
 	}
 
-	@media only screen and (max-width: 768px) {
+	@media only screen and (max-width: 992px) {
 		button {
 			margin-right: 0;
 			right: 20px;

@@ -5,7 +5,7 @@
 :root {
 	--font-mono: "Space Mono", monospace;
 	--max-width: 80vw;
-	--max-content-width: 70vw;
+	--max-content-width: 60vw;
 	--border-radius: 5px;
 }
 
@@ -50,4 +50,12 @@ button:hover {
 :focus-visible {
 	box-shadow: 0 0 0 4px var(--color-highlight);
 	outline: none;
+}
+
+
+@media only screen and (max-width: 992px) {
+	:root {
+		--max-width: 90vw;
+		--max-content-width: 90vw;
+	}
 }

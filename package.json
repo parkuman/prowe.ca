@@ -34,7 +34,9 @@
   "dependencies": {
     "@notionhq/client": "^1.0.2",
     "notion-to-md": "^2.3.2",
+    "rehype-autolink-headings": "^6.1.1",
     "rehype-highlight": "^5.0.2",
+    "rehype-slug": "^5.0.1",
     "rehype-stringify": "^9.0.3",
     "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",

@@ -24,13 +24,12 @@
 
 <script>
 	import Tag from "$components/Tag.svelte";
+	import Head from "$components/Head.svelte";
 
 	export let tags;
 </script>
 
-<svelte:head>
-	<title>Tags | Parker Rowe</title>
-</svelte:head>
+<Head title="Tags | Parker Rowe" />
 
 <h1>All Tags</h1>
 

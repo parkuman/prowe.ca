@@ -1,0 +1,78 @@
+<script>
+	import Tag from "$components/Tag.svelte";
+
+	export let post;
+</script>
+
+<a href={`/blog/${post.slug}`}>
+	<div class="preview-image" style={`background-image: url(${post.image})`} />
+
+	<div class="info">
+		<h1>{post.title}</h1>
+
+		<p>
+			{post.summary} <br /><br />
+			<u>Continue Reading →</u>
+		</p>
+		<ul>
+			{#each post.tags as tag}
+				<li>
+					<Tag text={tag.name} color={tag.color} href={`/tags/${tag.name}`} />
+				</li>
+			{/each}
+		</ul>
+	</div>
+</a>
+
+<style>
+	p {
+		margin: 20px 0;
+	}
+
+	/* tags */
+	a ul {
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 4px;
+	}
+
+	a {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 auto 100px auto;
+		min-height: 300px;
+		height: fit-content;
+		text-decoration: none;
+		color: var(--color-text);
+	}
+
+	a .preview-image {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 49%;
+	}
+
+	a .info {
+		margin: 50px 0;
+		width: 49%;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		a {
+			flex-direction: column;
+		}
+		a .info {
+			width: 100%;
+		}
+
+		a .preview-image {
+			width: 100%;
+			height: 300px;
+			margin: 0;
+		}
+	}
+</style>

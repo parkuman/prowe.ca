@@ -31,6 +31,7 @@
 	}
 
 	a {
+		position: relative;
 		text-decoration: none;
 		color: var(--color-text);
 		padding: 5px;
@@ -43,7 +44,8 @@
 	}
 
 	span {
-		display: inline;
-		margin-right: 8px;
+		display: inline-block;
+		position: absolute;
+		left: -30px;
 	}
 </style>

@@ -44,7 +44,7 @@
 		background-color: rgba(var(--color-tag-bg), 0.4);
 		border-radius: var(--border-radius);
 		padding: 2px 10px;
-		margin: 0 2px;
+		margin: 2px;
 		text-decoration: none;
 		color: var(--color-text);
 		font-family: var(--font-mono);
