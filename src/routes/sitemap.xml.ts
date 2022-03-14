@@ -3,9 +3,11 @@
 import { metadata } from "$lib/config";
 
 export async function get() {
+	const pages = ["/", "/blog", "/projects", "/tags"];
+
 	const blogPostRes = await fetch(`${metadata.baseUrl}/api/blog.json`);
 	const postFrontmatters = await blogPostRes.json();
-	const body = sitemap(postFrontmatters);
+	const body = sitemap(postFrontmatters, pages);
 
 	const headers = {
 		"Cache-Control": "max-age=0, s-maxage=3600",
@@ -17,7 +19,7 @@ export async function get() {
 	};
 }
 
-const sitemap = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
+const sitemap = (posts, pages) => `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset
   xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -31,6 +33,19 @@ const sitemap = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
+
+  ${pages
+		.map(
+			(page) =>
+				`
+        <url>
+        <loc>${metadata.baseUrl}${page}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+      </url>
+        `,
+		)
+		.join("")}
   ${posts
 		.map(
 			(post) =>
@@ -43,9 +58,5 @@ const sitemap = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
         `,
 		)
 		.join("")}
-  <url>
-    <loc>${metadata.baseUrl}/projects</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
-  </url>
+
 </urlset>`;
