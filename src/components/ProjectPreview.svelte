@@ -37,7 +37,7 @@
 		<ul class="tags">
 			{#each project.tags as tag}
 				<li>
-					<Tag text={tag.name} color={tag.color} />
+					<Tag text={tag.name} color={tag.color} href={`/tags/${tag.name}`} />
 				</li>
 			{/each}
 		</ul>
