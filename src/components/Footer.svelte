@@ -9,7 +9,7 @@
 	<ul class="left">
 		{#each socials as social}
 			<li>
-				<a target="_blank" href={social.href} title={social.name}>
+				<a target="_blank" rel="noopener noreferrer" href={social.href} title={social.name}>
 					<Icon name={social.name.toLowerCase()} width="25px" height="25px" />
 				</a>
 			</li>
@@ -88,7 +88,7 @@
 	a {
 		text-decoration: none;
 		color: var(--color-text);
-		padding: 5px;
+		padding: 6px 12px;
 		transition: var(--transition);
 		border-radius: var(--border-radius);
 	}

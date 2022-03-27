@@ -47,7 +47,7 @@
 			{/each}
 			<li>
 				<a target="_blank" href="/prowe_resume.pdf">
-					<button>RESUME</button>
+					<button class="styled-btn">RESUME</button>
 				</a>
 			</li>
 		</ul>
@@ -81,7 +81,7 @@
 		padding: 0 calc((100vw - var(--max-width)) / 2);
 		font-weight: 500;
 		letter-spacing: 0.07rem;
-		transition: var(--transition);
+		transition: all var(--transition);
 		background-color: var(--color-bg);
 	}
 

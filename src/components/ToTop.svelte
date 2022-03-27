@@ -7,6 +7,7 @@
 
 {#if yPos > 200}
 	<button
+		class="styled-btn"
 		title="scroll to top"
 		on:click={() => {
 			yPos = 0;

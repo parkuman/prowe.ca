@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Tag from "$components/Tag.svelte";
-	import type Project from "$types/Project";
+	import type { ProjectFrontmatter } from "$types/Project";
 	import Icon from "./Icon.svelte";
-	export let project: Project;
+	export let project: ProjectFrontmatter;
 
 	function getLinkType(link: string) {
 		if (link.toLowerCase().includes("github")) {
@@ -21,8 +21,8 @@
 	<div class="info">
 		<ul class="links">
 			{#each project.links as link}
-				<li>
-					<a href={link} target="_blank" class="icon">
+				<li title="open link to project">
+					<a href={link} target="_blank" rel="noopener noreferrer" class="icon">
 						<Icon name={getLinkType(link)} width="20px" height="20px" />
 					</a>
 				</li>
@@ -31,12 +31,12 @@
 		<h1>{project.title}</h1>
 
 		<p>
-			{project.description} <br /><br />
+			{project.summary} <br /><br />
 		</p>
 		<ul class="tags">
-			{#each project.technologies as tag}
+			{#each project.tags as tag}
 				<li>
-					<Tag text={tag} />
+					<Tag text={tag.name} color={tag.color} />
 				</li>
 			{/each}
 		</ul>
@@ -58,6 +58,11 @@
 
 	.links li {
 		margin-bottom: 20px;
+		transition: all ease 300ms;
+	}
+
+	.links li:hover {
+		transform: scale(1.2);
 	}
 
 	/* tags */

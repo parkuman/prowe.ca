@@ -1,6 +1,8 @@
 :root {
 	--color-bg-dark: #131418;
+	--color-bg-dark-accent: #1f2125;
 	--color-bg-light: #eaebef;
+	--color-bg-light-accent: #c0c1c5;
 	--color-text-dark-rgb: 255, 255, 255;
 	--color-text-dark: rgb(var(--color-text-dark-rgb));
 	--color-text-light-rgb: 19, 20, 24;
@@ -14,6 +16,7 @@ body.light {
 	--color-primary: rgb(var(--color-primary-rgb));
 	--color-secondary: blue;
 	--color-bg: var(--color-bg-light);
+	--color-bg-accent: var(--color-bg-light-accent);
 	--color-text-rgb: var(--color-text-light-rgb);
 	--color-text: var(--color-text-light);
 	color-scheme: light;
@@ -28,6 +31,7 @@ body.light {
 		--color-secondary-rgb: 248, 200, 64;
 		--color-secondary: rgb(var(--color-secondary-rgb));
 		--color-bg: var(--color-bg-dark);
+		--color-bg-accent: var(--color-bg-dark-accent);
 		--color-text-rgb: var(--color-text-dark-rgb);
 		--color-text: var(--color-text-dark);
 		color-scheme: dark;
@@ -42,6 +46,7 @@ body.dark {
 	--color-secondary-rgb: 248, 200, 64;
 	--color-secondary: rgb(var(--color-secondary-rgb));
 	--color-bg: var(--color-bg-dark);
+	--color-bg-accent: var(--color-bg-dark-accent);
 	--color-text-rgb: var(--color-text-dark-rgb);
 	--color-text: var(--color-text-dark);
 	color-scheme: dark;

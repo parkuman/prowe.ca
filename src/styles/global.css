@@ -4,7 +4,7 @@
 
 :root {
 	--font-mono: "Space Mono", monospace;
-	--max-width: 80vw;
+	--max-width: 97vw;
 	--max-content-width: 60vw;
 	--border-radius: 5px;
 }
@@ -28,7 +28,7 @@ body {
 	transition: all var(--transition);
 }
 
-button {
+button.styled-btn {
 	cursor: pointer;
 	background: none;
 	border-style: solid;
@@ -39,7 +39,7 @@ button {
 	transition: var(--transition);
 }
 
-button:hover {
+button.styled-btn:hover {
 	background-color: rgba(var(--color-primary-rgb), 0.1);
 }
 
@@ -48,10 +48,27 @@ button:hover {
 }
 
 :focus-visible {
-	box-shadow: 0 0 0 4px var(--color-highlight);
+	box-shadow: 0 0 0 1px var(--color-primary);
 	outline: none;
 }
 
+@media (orientation: landscape) {
+	::-webkit-scrollbar {
+		width: 12px;
+		background-color: var(--color-bg-accent);
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 3px;
+		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background-color: rgba(var(--color-text-rgb), 0.3);
+		border: 2px solid var(--color-bg-accent);
+	}
+}
 
 @media only screen and (max-width: 992px) {
 	:root {

@@ -4,6 +4,7 @@
 
 <script>
 	import Head from "$components/Head.svelte";
+	import TopTracks from "$components/TopTracks.svelte";
 	import ItemSpinner from "$components/ItemSpinner.svelte";
 	import { technologies, experience } from "$lib/config";
 
@@ -18,22 +19,27 @@
 	<p>Hi 👋 I'm,</p>
 	<h1>Parker Rowe</h1>
 	<h2>A Computer Engineering Student based in Ontario, Canada</h2>
-	<h3>I build things with <span><ItemSpinner items={technologies} withIcon /></span></h3>
+	<h3>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} withIcon /></span></h3>
 </section>
 
 <h1 class="section-header">About Me</h1>
 <section class="about">
+	<img src="/images/profile.webp" alt="pic of me :)" />
+
 	<p>
 		I'm Parker, a <b>computer engineering</b> student and <b>software developer</b>. I'll be
 		entering my 4th year of Computer Engineering specialized in Entreprenuership & Innovation @
-		Queen's University in 2022. Ever since I was young I've loved to learn about technology and how
-		I can build new things with it.
+		Queen's University in 2022.
 		<br />
 		<br />
-		I like to create things that people use and enjoy, including apps, websites, gadgets and computers.
-		Aside from tech, I love camping 🏕, playing guitar 🎸, running, climbing, and spending time with friends.
+		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and
+		making memories with friends.
+		<br />
+		<br />
+		<span class="top-tracks-wrapper">
+			<TopTracks />
+		</span>
 	</p>
-	<img src="/images/profile.webp" alt="pic of me :)" />
 </section>
 
 <section class="experience">
@@ -42,6 +48,7 @@
 		<div role="tablist" class="work-tablist">
 			{#each experience as job, i}
 				<button
+					class="styled-btn"
 					on:click={() => {
 						selectedJobIndex = i;
 					}}
@@ -138,7 +145,20 @@
 	.about {
 		display: grid;
 		grid-template-columns: 3fr 2fr;
+		grid-template-areas: "about-content about-image";
 		gap: 50px;
+	}
+
+	.about > p {
+		grid-area: about-content;
+	}
+
+	.about .top-tracks-wrapper {
+		max-width: 50px;
+	}
+
+	.about img {
+		grid-area: about-image;
 	}
 
 	.experience {
@@ -253,6 +273,12 @@
 		}
 		h1.section-header::after {
 			width: 70%;
+		}
+
+		.about {
+			grid-template-areas: "about-image about-content";
+			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr;
 		}
 
 		.about img {

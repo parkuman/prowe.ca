@@ -13,7 +13,7 @@ export const get = async ({ params }) => {
 
 	try {
 		const blogPostQuery = await notion.databases.query({
-			database_id: import.meta.env.VITE_NOTION_BLOG_DB, // https://www.notion.so/prowes/2998e28191c04363ad30bd44cbde863a?v=e32681b967bd4f47bee48e8f18ab561c
+			database_id: import.meta.env.VITE_NOTION_PROJECTS_DB, 
 			filter: {
 				and: [
 					{

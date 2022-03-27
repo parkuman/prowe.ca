@@ -4,9 +4,11 @@ import type {
 	GetPagePropertyResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import type { PostFrontmatter } from "$types/BlogPost";
+import type { ProjectFrontmatter } from "$types/Project";
 
 type NotionProperty = GetPagePropertyResponse["type"];
 type BlogProperty = keyof PostFrontmatter;
+type ProjectProperty = keyof ProjectFrontmatter;
 type NotionPageResponse = QueryDatabaseResponse["results"][number];
 
 export function getPropertyValue(property: string, notionPageRes: NotionPageResponse) {
@@ -15,14 +17,28 @@ export function getPropertyValue(property: string, notionPageRes: NotionPageResp
 
 	switch (propertyType) {
 		case "rich_text": // Array<RichTextItemResponse>
-			// gets simply the first text for that property, no need for all the extra stuff
+			// rich_text is actually an array. if there's more than one element return the array of plain text values
+			if (propertyValue.length > 1) {
+				const richTextList: string[] = [];
+				propertyValue.forEach((value) => {
+					if (!(value.plain_text === " " || value.plain_text === "\n")) {
+						richTextList.push(value.plain_text);
+					}
+				});
+
+				return richTextList;
+			}
+
+			// otherwise just return the one value as a string
 			return propertyValue[0]?.plain_text ?? "";
 		case "people": // Array<PartialUserObjectResponse>
 			// extracts only the first person in the list
 			return propertyValue[0]?.name ?? "";
 		case "date": // DateResponse | null
-			// gets just the start of the date
-			return propertyValue?.start ?? "";
+			return {
+				start: propertyValue.start ?? "",
+				end: propertyValue.end ?? null,
+			};
 		case "multi_select": // Array<SelectPropertyResponse>
 			// extracts just the names of each tag and returns them as an array of strings
 			if (!propertyValue.length) return [];
@@ -39,6 +55,16 @@ export function getPropertyValue(property: string, notionPageRes: NotionPageResp
 }
 
 export function getBlogPostProperty(property: BlogProperty, notionPageRes: NotionPageResponse) {
+	const receivedProperty = getPropertyValue(property, notionPageRes);
+
+	if (property === "date") {
+		return receivedProperty.start;
+	}
+
+	return receivedProperty;
+}
+
+export function getProjectProperty(property: ProjectProperty, notionPageRes: NotionPageResponse) {
 	return getPropertyValue(property, notionPageRes);
 }
 

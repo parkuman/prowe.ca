@@ -1,13 +1,26 @@
 <script context="module">
 	export const prerender = true;
+
+	export const load = async ({ fetch }) => {
+		const projectsResponse = await fetch("/api/projects.json");
+		const projects = await projectsResponse.json();
+
+		return {
+			props: {
+				projects,
+			},
+		};
+	};
 </script>
 
 <script lang="ts">
 	import Head from "$components/Head.svelte";
 	import Icon from "$components/Icon.svelte";
 	import ProjectPreview from "$components/ProjectPreview.svelte";
-	import { projects } from "$lib/config";
+	// import { projects } from "$lib/config";
+	import type { ProjectFrontmatter } from "$types/Project";
 
+	export let projects: ProjectFrontmatter[];
 	let searchQuery = "";
 
 	$: filteredProjects =
@@ -69,5 +82,9 @@
 		list-style: none;
 		margin: 0;
 		padding: 0;
+	}
+
+	li {
+		transition: var(--transition);
 	}
 </style>

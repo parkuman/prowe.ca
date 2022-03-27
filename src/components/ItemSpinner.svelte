@@ -21,11 +21,11 @@
 <ul>
 	{#each items as item, i}
 		{#if activeIndex === i}
-			<li id={i.toString()} in:fly={{ y: 100, duration: 200 }} out:fly={{ y: -100, duration: 200 }}>
+			<li id={i.toString()} in:fly={{ y: 0, duration: 200 }} out:fly={{ y: 100, duration: 200 }}>
 				{item}
 
 				{#if withIcon}
-					<Icon name={item.toLowerCase()} />
+					<span><Icon name={item.toLowerCase()}  /></span>
 				{/if}
 			</li>
 		{/if}
@@ -41,6 +41,11 @@
 	ul {
 		display: inline;
 		list-style: none;
-		margin: 0 0 0 1rem;
+	}
+
+	span {
+		display: inline-block;
+		position: absolute;
+		right: -30px;
 	}
 </style>

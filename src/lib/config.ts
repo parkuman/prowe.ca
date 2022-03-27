@@ -60,7 +60,7 @@ export const projects: Project[] = [
 			"As AI team lead of Queens University's Robomaster Design Team, I led twenty students toward learning, designing and creating auto-targeting robot artificial intelligence. Using Tensorflow's Object Detection API we have created a detection algorithm to detect enemy robot hit plates. Automating this process has given us a considerable advantage against the competition, and we learned a ton in the process! We found that the way we labelled data, and differentiating between red & blue coloured plates had a considerable effect on how accurate our model was.",
 		date: "December 2019",
 		image: "images/projects/rm-ai.jpg",
-		technologies: ["Python", "Tensorflow", "OpenCV", "Keras"],
+		technologies: ["Python", "TensorFlow", "OpenCV", "Keras"],
 		links: [
 			"https://github.com/parkuman/Robomaster-AIM",
 			"http://queensrobomaster.ca/",
