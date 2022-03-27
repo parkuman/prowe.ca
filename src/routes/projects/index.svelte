@@ -36,7 +36,7 @@
 <h1>Projects</h1>
 
 <label for="search">
-	<input id="search" placeholder="search by title" type="text" bind:value={searchQuery} />
+	<input id="search" placeholder="Search by Title" type="text" bind:value={searchQuery} />
 	<span class="search-icon">
 		<Icon name="search" />
 	</span>

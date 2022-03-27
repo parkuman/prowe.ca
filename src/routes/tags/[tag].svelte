@@ -1,21 +1,50 @@
 <script context="module" lang="ts">
 	import type { PostFrontmatter } from "$types/BlogPost";
+	import type { ProjectFrontmatter } from "$types/Project";
+
+	type PostFrontmatterPlusType = PostFrontmatter & { type: "Blog Post" };
+	type ProjectFrontmatterPlusType = ProjectFrontmatter & { type: "Project" };
 
 	export const prerender = true;
 
 	export const load = async ({ fetch, params }) => {
-		const blogResponse = await fetch("/api/blog.json");
-		const posts: PostFrontmatter[] = await blogResponse.json();
+		let frontmatters = [];
 
-		let postsWithTag: PostFrontmatter[] = [];
+		try {
+			let [blogRes, projectRes] = await Promise.all([
+				fetch("/api/blog.json"),
+				fetch("/api/projects.json"),
+			]);
 
-		posts.forEach((post) => {
-			if (post.tags.some((tag) => tag.name === params.tag)) postsWithTag.push(post);
+			let posts: PostFrontmatterPlusType[] = await blogRes.json();
+			let projects: ProjectFrontmatterPlusType[] = await projectRes.json();
+
+			posts = posts.map((post) => {
+				post.type = "Blog Post";
+				return post;
+			});
+
+			projects = projects.map((project) => {
+				project.type = "Project";
+				return project;
+			});
+
+			frontmatters = frontmatters.concat(posts, projects);
+		} catch (err) {
+			console.log(err);
+		}
+
+		let contentWithTag = [];
+
+		frontmatters.forEach((item) => {
+			if (item.tags.some((tag) => tag.name === params.tag)) {
+				contentWithTag.push(item);
+			}
 		});
 
 		return {
 			props: {
-				posts: postsWithTag,
+				content: contentWithTag,
 			},
 		};
 	};
@@ -23,38 +52,46 @@
 
 <script lang="ts">
 	import { page } from "$app/stores";
+	import Breadcrumbs from "$components/Breadcrumbs.svelte";
 	import Head from "$components/Head.svelte";
 	import Icon from "$components/Icon.svelte";
 	import PostPreview from "$components/PostPreview.svelte";
+	import ProjectPreview from "$components/ProjectPreview.svelte";
 
-	export let posts;
+	export let content;
 
 	let searchQuery = "";
 
-	$: filteredPosts =
+	$: filteredContent =
 		searchQuery === ""
-			? posts
-			: posts.filter((frontmatter) =>
+			? content
+			: content.filter((frontmatter) =>
 					frontmatter.title.toLowerCase().includes(searchQuery.toLowerCase()),
 			  );
 </script>
 
 <Head title={`${$page.params.tag} tag | Parker Rowe`} />
 
+<Breadcrumbs />
 <p>Content with tag:</p>
 <h1>{$page.params.tag}</h1>
 <label for="search">
-	<input id="search" placeholder="search by title" type="text" bind:value={searchQuery} />
+	<input id="search" placeholder="Search by Title" type="text" bind:value={searchQuery} />
 	<span class="search-icon">
 		<Icon name="search" />
 	</span>
 </label>
 
 <ul>
-	{#if filteredPosts.length}
-		{#each filteredPosts as post}
+	{#if filteredContent && filteredContent.length}
+		{#each filteredContent as item}
 			<li>
-				<PostPreview {post} />
+				<span class="content-type-prefix">{item.type}</span>
+				{#if item.type === "Blog Post"}
+					<PostPreview post={item} />
+				{:else}
+					<ProjectPreview project={item} />
+				{/if}
 			</li>
 		{/each}
 	{:else}
@@ -84,6 +121,12 @@
 	.search-icon {
 		position: absolute;
 		transform: translate(-30px, 48px);
+	}
+
+	.content-type-prefix {
+		font-size: 0.8rem;
+		font-family: var(--font-mono);
+		color: var(--color-primary);
 	}
 
 	ul {

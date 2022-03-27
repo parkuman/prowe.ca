@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Tag from "$components/Tag.svelte";
 	import type { ProjectFrontmatter } from "$types/Project";
-	import Icon from "./Icon.svelte";
+	import Icon from "$components/Icon.svelte";
+
 	export let project: ProjectFrontmatter;
 
 	function getLinkType(link: string) {

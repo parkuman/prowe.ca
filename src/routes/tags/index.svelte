@@ -1,17 +1,38 @@
 <script context="module" lang="ts">
 	import type { PostFrontmatter } from "$types/BlogPost";
+	import type { ProjectFrontmatter } from "$types/Project";
 
 	export const prerender = true;
 
 	export const load = async ({ fetch }) => {
-		const blogResponse = await fetch("/api/blog.json");
-		const posts: PostFrontmatter[] = await blogResponse.json();
+		let frontmatters = [];
 
-		let tags: PostFrontmatter["tags"] = [];
-		posts.forEach((post) => {
-			post.tags.forEach((tag) => {
-				if (!tags.includes(tag)) tags.push(tag);
+		try {
+			let [blogRes, projectRes] = await Promise.all([
+				fetch("/api/blog.json"),
+				fetch("/api/projects.json"),
+			]);
+
+			const posts: PostFrontmatter[] = await blogRes.json();
+			const projects: ProjectFrontmatter[] = await projectRes.json();
+
+			frontmatters = frontmatters.concat(posts, projects);
+		} catch (err) {
+			console.log(err);
+		}
+
+		let tags: PostFrontmatter["tags"] | ProjectFrontmatter["tags"] = [];
+		frontmatters.forEach((item) => {
+			item.tags.forEach((tag) => {
+				// only push if tag with this name doesn't exist in array
+				if (!tags.some((t) => t.name === tag.name)) {
+					tags.push(tag);
+				}
 			});
+		});
+
+		tags = tags.sort((a, b) => {
+			return a.name.localeCompare(b.name);
 		});
 
 		return {
@@ -53,6 +74,11 @@
 		text-align: center;
 		margin: 0 auto;
 		max-width: 80%;
-		height: 90vh;
+		/* height: 90vh; */
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
 	}
 </style>

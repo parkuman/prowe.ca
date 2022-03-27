@@ -21,6 +21,7 @@
 	import Comments from "$components/Comments.svelte";
 	import Tag from "$components/Tag.svelte";
 	import Head from "$components/Head.svelte";
+	import Breadcrumbs from "$components/Breadcrumbs.svelte";
 
 	export let post: BlogPost;
 </script>
@@ -34,6 +35,8 @@
 	author={post.frontmatter.author}
 	tags={post.frontmatter.tags.map((tag) => tag.name)}
 />
+
+<Breadcrumbs />
 <article>
 	<header>
 		<div class="info">
