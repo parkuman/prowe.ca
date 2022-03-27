@@ -4,7 +4,6 @@
 	const pathCrumbs = $page.url.pathname.split("/").slice(1);
 
 	function pathUpToAndIncludingCrumb(crumb) {
-		console.log("CRUMB: ", crumb);
 		let path = "";
 
 		for (const c of pathCrumbs) {
