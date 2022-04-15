@@ -79,7 +79,13 @@
 		</li>
 		{#each topTracks.tracks as track, i}
 			<li>
-				<a class="track" href={track.songUrl} target="_blank" rel="noopener noreferrer">
+				<a
+					style="--track-img-url: url({track.artwork})"
+					class="track"
+					href={track.songUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<span>{String(i + 1).padStart(2, "0")}.</span>
 					<img
 						width="40"
@@ -155,6 +161,7 @@
 		grid-template-columns: 40px auto 1fr;
 		padding: 5px;
 		position: relative;
+		background: none;
 	}
 
 	.track:hover {
@@ -187,6 +194,17 @@
 		padding: 5px 0;
 	}
 
+	@media only screen and (max-width: 1700px) {
+		.song-list-header {
+			flex-direction: column;
+		}
+
+		.time-group-desktop {
+			width: fit-content;
+			margin-top: 10px;
+		}
+	}
+
 	@media only screen and (max-width: 1200px) {
 		.time-group-mobile-wrapper {
 			display: block;
@@ -215,21 +233,43 @@
 			display: none;
 		}
 
-		.track {
-			min-width: 70vw;
-			min-height: 100%;
-			grid-template-columns: 1fr;
-			grid-template-rows: auto 1fr;
-			padding: 15px;
+		li {
 			margin-right: 10px;
+		}
+
+		.track {
+			min-width: 20vw;
+			min-height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			border-radius: var(--border-radius);
 			border: 1px solid var(--color-primary);
 			text-align: center;
+			background-image: var(--track-img-url);
+			background-size: 0 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.track::before {
+			content: "";
+			z-index: -1;
+			position: absolute;
+			float: left;
+			left: inherit;
+			top: -5px;
+			width: 110%;
+			height: 110%;
+			background-image: inherit;
+			background-size: cover;
+			filter: blur(3px) brightness(40%);
 		}
 
 		.track img {
-			margin: 0 auto;
-			margin-bottom: 10px;
+			display: none;
 		}
 
 		.track span {

@@ -162,7 +162,7 @@
 	}
 
 	.experience {
-		max-width: 70%;
+		max-width: 1200px;
 	}
 
 	.experience-wrapper {
