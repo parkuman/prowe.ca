@@ -102,7 +102,7 @@
 		{/each}
 	</ul>
 {:else if error}
-	<code>error while fetching top tracks from spotify :[</code>
+	<br />
 {:else}
 	<code>fetching tracks...</code>
 {/if}

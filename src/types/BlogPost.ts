@@ -16,6 +16,7 @@ export type PostFrontmatter = {
 type BlogPost = {
 	frontmatter: PostFrontmatter;
 	content: string;
+	views: string;
 };
 
 export default BlogPost;

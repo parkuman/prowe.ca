@@ -22,8 +22,22 @@
 	import Tag from "$components/Tag.svelte";
 	import Head from "$components/Head.svelte";
 	import Breadcrumbs from "$components/Breadcrumbs.svelte";
+	import { onMount } from "svelte";
 
 	export let post: BlogPost;
+
+	onMount(() => {
+		fetchViews();
+	});
+
+	async function fetchViews() {
+		const postViews = await fetch(`/api/views/${post.frontmatter.slug}.json`, {
+			method: "POST",
+		});
+		const views = await postViews.json();
+
+		post.views = views.total;
+	}
 </script>
 
 <Head
@@ -48,7 +62,8 @@
 					<div class="author-sub">
 						{new Date(post.frontmatter.date).toDateString()}
 						<!-- <span class="median-divider">·</span> X min read -->
-						<!-- <span class="median-divider">·</span> X views -->
+						<span class="median-divider">·</span>
+						{post.views ? `${post.views} Views` : ""}
 					</div>
 				</div>
 			</div>

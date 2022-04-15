@@ -1,7 +1,19 @@
 <script>
+	import { onMount } from "svelte";
 	import Tag from "$components/Tag.svelte";
-
 	export let post;
+	let views;
+
+	onMount(async () => {
+		fetchViews();
+	});
+
+	async function fetchViews() {
+		const viewsReq = await fetch(`/api/views/${post.slug}.json`);
+		const viewsTotal = await viewsReq.json();
+
+		views = viewsTotal?.total.toString();
+	}
 </script>
 
 <a href={`/blog/${post.slug}`}>
@@ -21,6 +33,7 @@
 				</li>
 			{/each}
 		</ul>
+		<p style="color: gray">{views} Views</p>
 	</div>
 </a>
 
