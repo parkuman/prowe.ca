@@ -36,6 +36,7 @@
 	li {
 		display: inline-block;
 		position: absolute;
+		height: fit-content;
 	}
 
 	ul {
