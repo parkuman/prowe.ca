@@ -17,7 +17,7 @@
 		top: calc(var(--nav-height) + 200px);
 	}
 
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 1200px) {
 		aside {
 			display: none;
 		}

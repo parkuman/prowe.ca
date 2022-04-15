@@ -185,7 +185,7 @@ article hr {
 }
 
 /* =========== mobile style =========== */
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
 	article header {
 		max-width: 100%;
 		flex-direction: column;

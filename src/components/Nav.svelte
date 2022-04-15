@@ -166,7 +166,7 @@
 		display: none;
 	}
 
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 1200px) {
 		.logo {
 			display: none;
 		}

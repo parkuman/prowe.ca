@@ -111,7 +111,7 @@
 		margin-top: 20px;
 	}
 
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 1200px) {
 		footer {
 			display: flex;
 			flex-direction: column;

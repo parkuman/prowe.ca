@@ -37,7 +37,7 @@
 		opacity: 100%;
 	}
 
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 1200px) {
 		button {
 			margin-right: 0;
 			right: 20px;

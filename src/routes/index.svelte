@@ -261,7 +261,7 @@
 		color: var(--color-primary);
 	}
 
-	@media only screen and (max-width: 992px) {
+	@media only screen and (max-width: 1200px) {
 		.hero h2 {
 			max-width: 100%;
 		}

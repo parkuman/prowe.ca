@@ -70,7 +70,7 @@ button.styled-btn:hover {
 	}
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
 	:root {
 		--max-width: 90vw;
 		--max-content-width: 90vw;
