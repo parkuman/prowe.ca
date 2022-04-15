@@ -238,8 +238,6 @@
 		}
 
 		.track {
-			min-width: 20vw;
-			min-height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -249,6 +247,7 @@
 			text-align: center;
 			background-image: var(--track-img-url);
 			background-size: 0 0;
+			min-width: 200px;
 			width: 100%;
 			height: 100%;
 			overflow: hidden;
