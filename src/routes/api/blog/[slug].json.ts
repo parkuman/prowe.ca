@@ -50,7 +50,7 @@ export const get = async ({ params }) => {
 
 		const blogPostNotionResponse = blogPostQuery.results[0];
 		const mdBlocks = await n2md.pageToMarkdown(blogPostNotionResponse.id);
-		const mdString = n2md.toMarkdownString(mdBlocks);
+		const mdString = n2md.toMarkdownString(mdBlocks).replace(/```plain text/g, "```txt");
 		const htmlString = mdToHtml(mdString);
 
 		// // write outputs to some test files to see what they look like

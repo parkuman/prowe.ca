@@ -76,7 +76,7 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="preview-image" style={`background-image: url(${post.frontmatter.image})`} />
+		<!-- <div class="preview-image" style={`background-image: url(${post.frontmatter.image})`} /> -->
 	</header>
 	{@html post.content}
 </article>

@@ -56,11 +56,16 @@ button.styled-btn:hover {
 	::-webkit-scrollbar {
 		width: 12px;
 		background-color: var(--color-bg-accent);
+		height: 12px;
 	}
 
 	::-webkit-scrollbar-track {
 		border-radius: 3px;
 		background-color: transparent;
+	}
+
+	::-webkit-scrollbar-corner {
+		background-color: var(--color-bg-accent);
 	}
 
 	::-webkit-scrollbar-thumb {
