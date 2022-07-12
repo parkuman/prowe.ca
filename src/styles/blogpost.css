@@ -205,13 +205,6 @@ article hr {
 	margin: 40px 0;
 }
 
-/* indent the list items */
-article > ul > li {
-	position: relative;
-	left: 20px;
-	width: calc(100% - 20px);
-}
-
 article p > a {
 	border-bottom: 3px solid rgba(var(--color-primary-rgb), 0.3);
 	text-decoration: none;
