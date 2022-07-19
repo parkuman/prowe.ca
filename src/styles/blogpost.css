@@ -203,10 +203,10 @@ article > ol {
 	width: calc(100% - 20px);
 }
 
-article > ul > li > p {
+article > ul > li > p, article > ol > li > p {
 	margin: 0;
 }
-article > ul > li {
+article > ul > li, article > ol > li {
 	margin-top: 21px;
 }
 
