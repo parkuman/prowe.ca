@@ -18,11 +18,8 @@
 <section class="hero">
 	<h1>Parker Rowe</h1>
 	<h2>Engineer, Developer</h2>
-	<p>
-		A Computer Engineering Student based in Ontario, Canada 🇨🇦. I build things with&nbsp;&nbsp;<span
-			><ItemSpinner items={technologies} /></span
-		>
-	</p>
+	<p>A Computer Engineering Student based in Ontario, Canada 🇨🇦.</p>
+	<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
 </section>
 
 <h1 class="section-header">About Me</h1>
