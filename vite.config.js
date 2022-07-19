@@ -11,6 +11,9 @@ const config = {
       '$data': path.resolve('data'),
       '$types': path.resolve('src/types'),
     }
+  },
+  server: {
+    port: 3000
   }
 };
 

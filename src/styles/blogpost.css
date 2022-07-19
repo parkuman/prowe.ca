@@ -215,6 +215,19 @@ article p > a:hover {
 	background-color: rgba(var(--color-primary-rgb), 0.3);
 }
 
+article ul, article ol {
+	position: relative;
+	left: 20px;
+	width: calc(100% - 20px);
+}
+
+article li > p {
+	margin: 0;
+}
+article li {
+	margin-top: 21px;
+}
+
 /* =========== mobile style =========== */
 @media only screen and (max-width: 1200px) {
 	article header {
