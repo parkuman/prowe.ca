@@ -137,10 +137,12 @@ export const experience: Experience[] = [
 
 export const technologies = [
 	"TypeScript",
+	"Rust",
 	"Svelte",
 	"React",
 	"Python",
 	"NextJS",
 	"OpenCV",
-	"Love ❤️",
+	"WebAssembly",
+	"Love<3",
 ];

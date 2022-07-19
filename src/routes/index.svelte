@@ -103,7 +103,7 @@
 
 	.hero {
 		min-height: calc(100vh - 104px - 104px);
-		margin-top: 200px;
+		margin-top: 100px;
 		letter-spacing: 0.1em;
 	}
 
