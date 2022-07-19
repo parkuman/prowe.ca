@@ -104,7 +104,6 @@
 	.hero h1 {
 		align-self: center;
 		text-transform: uppercase;
-		font-family: var(--font-mono);
 
 		font-size: calc(4vw + 4vh);
 	}
