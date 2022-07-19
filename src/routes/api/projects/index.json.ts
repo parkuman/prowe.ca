@@ -4,7 +4,7 @@ import type { ProjectFrontmatter } from "$types/Project";
 
 const notion = new Client({ auth: import.meta.env.VITE_NOTION_API_KEY });
 
-export const get = async () => {
+export const GET = async () => {
 	try {
 		const projectsQuery = await notion.databases.query({
 			database_id: import.meta.env.VITE_NOTION_PROJECTS_DB,

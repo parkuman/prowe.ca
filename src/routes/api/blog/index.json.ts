@@ -4,7 +4,7 @@ import type { PostFrontmatter } from "$types/BlogPost";
 
 const notion = new Client({ auth: import.meta.env.VITE_NOTION_API_KEY });
 
-export const get = async () => {
+export const GET = async () => {
 	try {
 		const blogPostQuery = await notion.databases.query({
 			database_id: import.meta.env.VITE_NOTION_BLOG_DB, // https://www.notion.so/prowes/2998e28191c04363ad30bd44cbde863a?v=e32681b967bd4f47bee48e8f18ab561c

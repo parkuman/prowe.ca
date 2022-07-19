@@ -1,7 +1,7 @@
 import prisma from "$lib/db";
 
 // returns the total amount of blog post views for a given slug
-export const get = async ({ params }) => {
+export const GET = async ({ params }) => {
 	const { slug } = params;
 
 	const views = await prisma.views.findUnique({

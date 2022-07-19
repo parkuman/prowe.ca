@@ -1,6 +1,6 @@
 import { getNowPlaying } from "$lib/spotify";
 
-export const get = async () => {
+export const GET = async () => {
 	const response = await getNowPlaying();
 
 	if (response.status === 204 || response.status > 400) {

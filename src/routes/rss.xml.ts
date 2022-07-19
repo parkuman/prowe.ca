@@ -18,7 +18,7 @@ function pubDate(date: Date) {
 	return parts.join(" ");
 }
 
-export async function get() {
+export async function GET() {
 	const blogPostRes = await fetch(`${metadata.baseUrl}/api/blog.json`);
 	const postFrontmatters = await blogPostRes.json();
 

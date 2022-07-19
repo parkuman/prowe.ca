@@ -1,6 +1,6 @@
 import { getTopTracks } from "$lib/spotify";
 
-export const get = async ({ url }) => {
+export const GET = async ({ url }) => {
 	const time_range = url.searchParams.get("time_range") ?? "medium_term";
 
 	const response = await getTopTracks(time_range);

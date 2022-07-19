@@ -8,7 +8,7 @@ import { mdToHtml } from "$lib/markdown";
 const notion = new Client({ auth: import.meta.env.VITE_NOTION_API_KEY });
 const n2md = new NotionToMarkdown({ notionClient: notion });
 
-export const get = async ({ params }) => {
+export const GET = async ({ params }) => {
 	const { slug } = params;
 
 	try {

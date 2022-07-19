@@ -2,7 +2,7 @@
 
 import { metadata } from "$lib/config";
 
-export async function get() {
+export async function GET() {
 	const pages = ["/", "/blog", "/projects", "/tags"];
 
 	const blogPostRes = await fetch(`${metadata.baseUrl}/api/blog.json`);

@@ -2,7 +2,7 @@
 
 import prisma from "$lib/db";
 
-export const get = async () => {
+export const GET = async () => {
 	const allViews = await prisma.views.aggregate({
 		_sum: {
 			count: true,
