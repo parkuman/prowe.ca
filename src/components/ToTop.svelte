@@ -31,6 +31,7 @@
 		width: var(--to-top-size);
 		height: var(--to-top-size);
 		opacity: 30%;
+		padding: 0 !important;
 	}
 
 	button:hover {

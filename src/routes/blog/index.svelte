@@ -31,7 +31,7 @@
 </script>
 
 <Head title="Blog | Parker Rowe" />
-<h1>Blog</h1>
+<h1>Blog Posts</h1>
 
 <label for="search">
 	<input id="search" placeholder="Search by Title" type="text" bind:value={searchQuery} />

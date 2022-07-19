@@ -15,7 +15,7 @@
 	});
 </script>
 
-<header class={`${yPos > 200 ? "scroll" : ""}`}>
+<header class={`${yPos > 40 ? "scroll" : ""}`}>
 	<!-- logo -->
 	<a href="/" title="navigate home" class="logo">
 		<img src="/images/logo.svg" alt="logo" />
@@ -58,20 +58,16 @@
 
 <style>
 	:root {
-		--nav-height: 90px;
+		--nav-height: 70px;
+		--nav-scroll-pt: 30px;
 		--nav-item-padding: 20px;
 	}
 
-	header.scroll {
-		--nav-height: 70px;
-	}
-
 	header {
-		position: fixed;
+		position: sticky;
 		z-index: 2;
 		top: 0;
 		left: 0;
-		width: 100vw;
 		height: var(--nav-height);
 		color: var(--text);
 		display: flex;
@@ -79,15 +75,16 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 0 calc((100vw - var(--max-width)) / 2);
+		margin-top: var(--nav-scroll-pt);
 		font-weight: 500;
 		letter-spacing: 0.07rem;
-		transition: all var(--transition);
+		transition: var(--transition) all;
 		background-color: var(--color-bg);
 	}
 
 	header.scroll {
 		background-color: var(--color-bg);
-		box-shadow: rgba(var(--color-primary-rgb), 0.07) 0px 5px 15px;
+		border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.1);
 	}
 
 	nav {
@@ -133,12 +130,6 @@
 		color: var(--color-primary);
 	}
 
-	button {
-		font-weight: 500;
-		letter-spacing: 0.07rem;
-		padding: 10px 20px;
-	}
-
 	a,
 	button {
 		transition: var(--transition);
@@ -147,7 +138,7 @@
 	}
 
 	img {
-		height: calc(var(--nav-height) - 10px);
+		height: calc(var(--nav-height) - 20px);
 		transition: var(--transition);
 	}
 

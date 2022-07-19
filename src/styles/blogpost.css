@@ -11,7 +11,7 @@ article header {
 }
 
 main > nav {
-	margin-top: 150px;
+	margin-top: 80px;
 }
 
 article .preview-image {
@@ -136,7 +136,7 @@ article img,
 article pre code {
 	width: 90%;
 	display: block;
-	margin: 40px auto 90px auto;
+	margin: 20px auto;
 	max-height: 800px;
 	overflow: auto;
 }
@@ -196,17 +196,17 @@ article p > a:hover {
 	background-color: rgba(var(--color-primary-rgb), 0.3);
 }
 
-article ul,
-article ol {
+article > ul,
+article > ol {
 	position: relative;
 	left: 20px;
 	width: calc(100% - 20px);
 }
 
-article li > p {
+article > ul > li > p {
 	margin: 0;
 }
-article li {
+article > ul > li {
 	margin-top: 21px;
 }
 

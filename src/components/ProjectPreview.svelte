@@ -16,7 +16,7 @@
 	}
 </script>
 
-<a href={`/projects`} class="wrapper">
+<a class="wrapper">
 	<div class="preview-image" style={`background-image: url(${project.image})`} />
 
 	<div class="info">

@@ -85,8 +85,12 @@
 <section class="more">
 	<h1 class="section-header">My Work</h1>
 	<p>
-		Please feel free to check out some of <a href="/projects">my work</a> or
-		<a href="/blog">Blog</a> where I sometimes write about things I've been working on.
+		Please feel free to check out some of my work or my Blog where I post about things I've been
+		working on.
+	</p>
+	<p style="text-align:center">
+		<a href="/projects"><button class="styled-btn">Projects</button></a>
+		<a href="/blog"><button class="styled-btn">Blog Posts</button></a>
 	</p>
 </section>
 
