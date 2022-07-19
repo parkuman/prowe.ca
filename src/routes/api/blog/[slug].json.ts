@@ -50,6 +50,12 @@ export const GET = async ({ params }) => {
 
 		const blogPostNotionResponse = blogPostQuery.results[0];
 		const mdBlocks = await n2md.pageToMarkdown(blogPostNotionResponse.id);
+		// change code indentation to 2 spaces
+		mdBlocks.forEach((block) => {
+			if (block.type === "code") {
+				block.parent = block.parent.replace(/\t/g, "  ");
+			}
+		});
 		const mdString = n2md.toMarkdownString(mdBlocks).replace(/```plain text/g, "```txt");
 		const htmlString = mdToHtml(mdString);
 
