@@ -16,10 +16,13 @@
 <Head />
 
 <section class="hero">
-	<p>Hi 👋 I'm,</p>
 	<h1>Parker Rowe</h1>
-	<h2>A Computer Engineering Student based in Ontario, Canada</h2>
-	<h3>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} withIcon /></span></h3>
+	<h2>Engineer, Developer</h2>
+	<p>
+		A Computer Engineering Student based in Ontario, Canada 🇨🇦. I build things with&nbsp;&nbsp;<span
+			><ItemSpinner items={technologies} /></span
+		>
+	</p>
 </section>
 
 <h1 class="section-header">About Me</h1>
@@ -27,9 +30,9 @@
 	<img src="/images/profile.webp" alt="pic of me :)" />
 
 	<p>
-		I'm Parker, a <b>computer engineering</b> student and <b>software developer</b>. I'll be
-		entering my 4th year of Computer Engineering specialized in Entreprenuership & Innovation @
-		Queen's University in 2022.
+		I'm Parker, a computer engineering student and software developer. I'll be entering my 4th year
+		of Computer Engineering specialized in Entreprenuership & Innovation @ Queen's University in
+		2022.
 		<br />
 		<br />
 		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and
@@ -79,38 +82,44 @@
 	</div>
 </section>
 
+<section class="more">
+	<h1 class="section-header">My Work</h1>
+	<p>
+		Please feel free to check out some of <a href="/projects">my work</a> or
+		<a href="/blog">Blog</a> where I sometimes write about things I've been working on.
+	</p>
+</section>
+
 <style>
 	section {
-		margin: 0 auto;
-		min-height: 60vh;
+		min-height: 40vh;
 		transition: var(--transition);
-		margin-bottom: 200px;
+		margin-bottom: 100px;
 	}
 
 	.hero {
-		min-height: 80vh;
-		margin-top: 300px;
+		min-height: calc(100vh - 104px - 104px);
+		margin-top: 200px;
 		letter-spacing: 0.1em;
 	}
-	.hero p {
-		font-weight: bold;
-		color: var(--color-primary);
-		font-family: var(--font-mono);
-		text-transform: uppercase;
 
-		font-style: italic;
-		font-size: calc(0.8vw + 0.8vh);
+	.hero p {
+		max-width: 50%;
 	}
 	.hero h1 {
 		align-self: center;
-		text-transform: uppercase;
-
-		font-size: calc(4vw + 4vh);
+		/* text-transform: uppercase; */
+		/* font-size: calc(4vw + 4vh); */
+		font-size: 2.5rem;
+		line-height: 2.5rem;
 	}
 
 	.hero h2 {
-		font-size: calc(1vw + 1vh);
-		max-width: 50%;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		font-weight: 400;
+		color: rgba(var(--color-text-rgb), 0.6);
+		/* font-size: calc(1vw + 1vh); */
 		font-family: var(--font-mono);
 	}
 
@@ -260,8 +269,11 @@
 		color: var(--color-primary);
 	}
 
+	.more {
+	}
+
 	@media only screen and (max-width: 1200px) {
-		.hero h2 {
+		.hero p {
 			max-width: 100%;
 		}
 	}

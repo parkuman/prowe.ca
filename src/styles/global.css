@@ -29,6 +29,14 @@ body {
 	transition: all var(--transition);
 }
 
+h1 {
+	font-size: 1.875rem;
+}
+
+h2 {
+	font-size: 1.875rem;
+}
+
 p {
 	margin-block-start: 1em;
 	margin-block-end: 1em;
