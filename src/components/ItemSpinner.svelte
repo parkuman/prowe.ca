@@ -41,8 +41,6 @@
 	ul {
 		display: inline;
 		list-style: none;
-		position: relative;
-		top: 2.5px;
 	}
 
 	span {
