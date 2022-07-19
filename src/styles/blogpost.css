@@ -245,9 +245,9 @@ article > ul > li {
 [id]::before {
 	content: "";
 	display: block;
-	height: var(--nav-height);
+	height: calc(var(--nav-height) + 10px);
 	margin-top: calc(
-		-1 * var(--nav-height)
+		-1 * (var(--nav-height) + 10px)
 	); /* shift the hidden element back up so we don't have huge spaces*/
 	visibility: hidden;
 }

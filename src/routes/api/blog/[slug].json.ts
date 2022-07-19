@@ -57,7 +57,10 @@ export const GET = async ({ params }) => {
 			}
 		});
 		const mdString = n2md.toMarkdownString(mdBlocks).replace(/```plain text/g, "```txt");
-		const htmlString = mdToHtml(mdString);
+		const htmlString = mdToHtml(mdString).replace(
+			/<a href=/g,
+			`<a rel="noopener noreferrer" target="_blank" href=`,
+		);
 
 		// // write outputs to some test files to see what they look like
 		// fs.writeFile("test.md", mdString, () => {
