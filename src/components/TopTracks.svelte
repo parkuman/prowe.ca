@@ -235,6 +235,7 @@
 
 		li {
 			margin-right: 10px;
+			scroll-snap-align: center;
 		}
 
 		.track {
@@ -284,6 +285,10 @@
 
 			/* allow the tracks to overflow the padding on the right side */
 			width: calc(100% + calc(100vw - var(--max-width)) / 2);
+
+			scroll-snap-type: x mandatory;
+			scroll-behavior: smooth;
+
 		}
 	}
 </style>
