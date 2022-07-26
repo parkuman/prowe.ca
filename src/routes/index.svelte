@@ -153,13 +153,20 @@
 
 	.about {
 		display: grid;
-		grid-template-columns: 3fr 2fr;
+		grid-template-columns: 3fr 1fr;
 		grid-template-areas: "about-content about-image";
 		gap: 50px;
 	}
 
 	.about > p {
 		grid-area: about-content;
+	}
+
+	.about > img {
+		padding: 5px;
+		max-width: 100%;
+		border: 1px var(--color-primary) solid;
+		border-radius: 50%;
 	}
 
 	.about .top-tracks-wrapper {

@@ -53,7 +53,7 @@
 
 	a {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
 		margin: 0 auto 100px auto;
 		min-height: 300px;
@@ -66,26 +66,16 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		width: 49%;
+		width: 100%;
+		min-height: 300px;
+		max-height: 30vh;
+		margin: 0;
 	}
 
 	a .info {
 		margin: 50px 0;
-		width: 49%;
+		width: 100%;
 	}
 
-	@media only screen and (max-width: 1200px) {
-		a {
-			flex-direction: column;
-		}
-		a .info {
-			width: 100%;
-		}
-
-		a .preview-image {
-			width: 100%;
-			height: 300px;
-			margin: 0;
-		}
-	}
+	
 </style>

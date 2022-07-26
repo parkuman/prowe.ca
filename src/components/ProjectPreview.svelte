@@ -16,11 +16,12 @@
 	}
 </script>
 
-<a class="wrapper">
+<div class="wrapper">
 	<div class="preview-image" style={`background-image: url(${project.image})`} />
 
 	<div class="info">
 		<ul class="links">
+			<li title="links">&lt;/&gt;</li>
 			{#each project.links as link}
 				<li title="open link to project">
 					<a href={link} target="_blank" rel="noopener noreferrer" class="icon">
@@ -42,11 +43,11 @@
 			{/each}
 		</ul>
 	</div>
-</a>
+</div>
 
 <style>
 	p {
-		margin: 20px 0;
+		margin: 1rem 0;
 	}
 
 	.links {
@@ -57,12 +58,12 @@
 		gap: 4px;
 	}
 
-	.links li {
-		margin-bottom: 20px;
+	.links li:not(:first-of-type) {
+		margin-bottom: 1rem;
 		transition: all ease 300ms;
 	}
 
-	.links li:hover {
+	.links li:hover:not(:first-of-type) {
 		transform: scale(1.2);
 	}
 
@@ -84,39 +85,27 @@
 
 	.wrapper {
 		display: flex;
-		flex-direction: row;
 		justify-content: space-between;
-		margin: 0 auto 100px auto;
+		margin: 0 auto 80px auto;
 		min-height: 300px;
 		height: fit-content;
 		text-decoration: none;
 		color: var(--color-text);
+		flex-direction: column;
 	}
 
 	.wrapper .preview-image {
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
-		width: 49%;
+		width: 100%;
+		min-height: 300px;
+		max-height: 30vh;
+		margin: 0;
 	}
 
 	.wrapper .info {
 		margin: 50px 0;
-		width: 49%;
-	}
-
-	@media only screen and (max-width: 1200px) {
-		.wrapper {
-			flex-direction: column;
-		}
-		.wrapper .info {
-			width: 100%;
-		}
-
-		.wrapper .preview-image {
-			width: 100%;
-			height: 300px;
-			margin: 0;
-		}
+		width: 100%;
 	}
 </style>

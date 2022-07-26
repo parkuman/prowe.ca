@@ -234,13 +234,6 @@ article > ul > li, article > ol > li {
 	}
 }
 
-/* =========== larger than mobile style =========== */
-@media only screen and (max-width: 1200px) {
-	article header {
-		max-width: var(--max-content-width);
-	}
-}
-
 /* =========== Header Permalink =========== */
 [id]::before {
 	content: "";
