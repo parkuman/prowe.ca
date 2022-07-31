@@ -125,7 +125,7 @@ article i,
 article a {
 	margin-top: 21px;
 	font-size: 1rem;
-	font-size: 1.75;
+	line-height: 1.2rem;
 }
 
 article a {
@@ -203,10 +203,12 @@ article > ol {
 	width: calc(100% - 20px);
 }
 
-article > ul > li > p, article > ol > li > p {
+article > ul > li > p,
+article > ol > li > p {
 	margin: 0;
 }
-article > ul > li, article > ol > li {
+article > ul > li,
+article > ol > li {
 	margin-top: 21px;
 }
 

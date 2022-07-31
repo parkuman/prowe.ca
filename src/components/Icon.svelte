@@ -59,7 +59,7 @@
 {:else if name === "nextjs"}
 	<svg viewBox="0 0 128 128" {width} {height}>
 		<path
-		fill="currentColor"
+			fill="currentColor"
 			d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64c11.2 0 21.7-2.9 30.8-7.9L48.4 55.3v36.6h-6.8V41.8h6.8l50.5 75.8C116.4 106.2 128 86.5 128 64c0-35.3-28.7-64-64-64zm22.1 84.6l-7.5-11.3V41.8h7.5v42.8z"
 		/>
 	</svg>
@@ -95,6 +95,32 @@
 		<path d="M18 6L6 18" />
 		<path d="M6 6l12 12" />
 	</svg>
+{:else if name === "npm"}
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 23 9"
+		{width}
+		{height}
+	>
+		<g id="surface1">
+			<path
+				style=" fill-opacity:0;"
+				d="M 10.273438 7.710938 L 10.273438 6.414062 L 12.808594 6.414062 L 12.808594 1.296875 L 7.703125 1.296875 L 7.703125 7.710938 Z M 10.273438 7.710938 "
+			/>
+			<path
+				style=" fill-opacity:0;"
+				d="M 10.273438 2.585938 L 11.519531 2.585938 L 11.519531 5.125 L 10.273438 5.125 Z M 10.273438 2.585938 "
+			/>
+			<path
+				style="fill-opacity:0;"
+				d="M 3.824219 6.414062 L 3.824219 2.585938 L 5.113281 2.585938 L 5.113281 6.414062 L 6.402344 6.414062 L 6.402344 1.296875 L 1.300781 1.296875 L 1.300781 6.414062 Z M 3.824219 6.414062 "
+			/>
+			<path
+				style="fill-opacity:0;"
+				d="M 16.632812 6.414062 L 16.632812 2.585938 L 17.921875 2.585938 L 17.921875 6.414062 L 19.210938 6.414062 L 19.210938 2.585938 L 20.5 2.585938 L 20.5 6.414062 L 21.789062 6.414062 L 21.789062 1.296875 L 14.097656 1.296875 L 14.097656 6.414062 Z M 16.632812 6.414062 "
+			/>
+		</g>
+	</svg>
 {:else}
 	<!-- use feather icons -->
 	<svg {width} {height} viewBox="0 0 24 24" aria-hidden="true">
@@ -107,7 +133,7 @@
 		/* width: 1rem;
 		height: 1rem; */
 		stroke: currentColor;
-		stroke-width: 1px;
+		stroke-width: 0.5px;
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		fill: none;

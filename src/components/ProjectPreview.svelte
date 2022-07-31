@@ -10,6 +10,10 @@
 			return "github";
 		} else if (link.toLowerCase().includes("you")) {
 			return "youtube";
+		} else if (link.toLowerCase().includes("npmjs")) {
+			return "npm";
+		} else if (link.toLowerCase().includes("/blog/")) {
+			return "edit-3";
 		} else {
 			return "globe";
 		}
