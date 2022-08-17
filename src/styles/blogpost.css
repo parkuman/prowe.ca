@@ -122,10 +122,11 @@ article h3 {
 
 article p,
 article i,
+article ul,
 article a {
 	margin-top: 21px;
 	font-size: 1rem;
-	line-height: 1.2rem;
+	line-height: 1.4rem;
 }
 
 article a {
@@ -154,7 +155,7 @@ article blockquote > p {
 	border-left: 2px solid rgba(var(--color-text-rgb), 0.2);
 }
 
-article code {
+article pre > code {
 	font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
 	font-size: 1rem;
 	border-radius: var(--border-radius);
@@ -162,7 +163,8 @@ article code {
 }
 
 /* inline code */
-article p > code {
+article ul code,
+article p code {
 	font-weight: 600;
 	margin: 0 5px;
 	font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
@@ -187,7 +189,7 @@ article hr {
 }
 
 article p > a {
-	border-bottom: 3px solid rgba(var(--color-primary-rgb), 0.3);
+	border-bottom: 2px solid rgba(var(--color-primary-rgb), 0.3);
 	text-decoration: none;
 	transition: var(--transition);
 }
