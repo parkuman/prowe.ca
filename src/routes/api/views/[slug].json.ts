@@ -3,7 +3,7 @@ import prisma from "$lib/db";
 // returns the total amount of blog post views for a given slug
 export const GET = async ({ params }) => {
 	const { slug } = params;
-
+	
 	const views = await prisma.views.findUnique({
 		where: {
 			slug,
@@ -25,7 +25,7 @@ export const GET = async ({ params }) => {
 };
 
 // increments the total amount of views for a given slug / creates a new one if it doesn't exist
-export const post = async ({ params }) => {
+export const POST = async ({ params }) => {
 	const { slug } = params;
 
 	const upsertViews = await prisma.views.upsert({

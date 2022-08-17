@@ -1,5 +1,5 @@
-import pkg from "@prisma/client";
-const { PrismaClient } = pkg;
+import PrismaClientPkg from "@prisma/client";
+const PrismaClient = PrismaClientPkg.PrismaClient;
 
 const prisma = new PrismaClient();
 

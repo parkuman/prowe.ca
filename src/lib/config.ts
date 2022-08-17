@@ -74,11 +74,11 @@ export const experience: Experience[] = [
 		title: "Software Engineering Intern",
 		company: { name: "Ericsson", url: "https://www.ericsson.com/" },
 		startDate: "May 2021",
-		endDate: "Present",
+		endDate: "September 2022",
 		points: [
-			"Lead Full-stack development of a new VPN certificate system using React, NextJS, MySQL, Docker, OpenVPN, and Easy-RSA for Ericsson Response and the UN to securely manage access to networks during disaster relief missions",
-			"Design & deploy a Kubernetes-scaled AI material prediction feature into Ericsson Indoor Planner to automatically predict user-uploaded floorplan's materials",
-			"Develop and create test cases of new features for Ericsson Indoor Planner's API in C#",
+			"Led Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missions",
+			"Designed & deployed a Kubernetes-scaled AI material prediction feature for Ericsson Indoor Planner to predict user-uploaded floorplan's materials",
+			"Developed and create tests of new features for Ericsson Indoor Planner's backend API in C#",
 		],
 	},
 	{
