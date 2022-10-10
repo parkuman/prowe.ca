@@ -20,6 +20,10 @@
 	<h2>Engineer, Developer</h2>
 	<p>A Computer Engineering Student based in Ontario, Canada 🇨🇦.</p>
 	<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
+	<br />
+	<a target="_blank" href="/prowe_resume.pdf">
+		<button class="styled-btn">RESUME</button>
+	</a>
 </section>
 
 <h1 class="section-header">About Me</h1>
@@ -27,9 +31,8 @@
 	<img src="/images/profile.webp" alt="pic of me :)" />
 
 	<p>
-		I'm Parker, a computer engineering student and software developer. I'll be entering my 4th year
-		of Computer Engineering specialized in Entreprenuership & Innovation @ Queen's University in
-		2022.
+		I'm Parker, a computer engineering student and software developer. I am now in my 4th and final year
+		of Computer Engineering specialized in Entreprenuership & Innovation @ Queen's University.
 		<br />
 		<br />
 		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and
