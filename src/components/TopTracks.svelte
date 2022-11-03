@@ -112,7 +112,7 @@
 		display: flex;
 		width: 100%;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		margin-bottom: 10px;
 	}
 
@@ -125,6 +125,8 @@
 		border: 1px solid var(--color-primary);
 		border-radius: var(--border-radius);
 		transition: var(--transition);
+		display: flex;
+		flex-direction: row;
 	}
 
 	.time-group button {
@@ -201,6 +203,7 @@
 
 		.time-group-desktop {
 			width: fit-content;
+			flex: 2;
 			margin-top: 10px;
 		}
 	}
@@ -286,8 +289,8 @@
 			/* allow the tracks to overflow the padding on the right side */
 			width: calc(100% + calc(100vw - var(--max-width)) / 2);
 
-			scroll-snap-type: x mandatory;
-			scroll-behavior: smooth;
+			/* scroll-snap-type: x mandatory;
+			scroll-behavior: smooth; */
 
 		}
 	}

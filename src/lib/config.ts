@@ -71,39 +71,39 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
 	{
-		title: "Software Engineering Intern",
-		company: { name: "Ericsson", url: "https://www.ericsson.com/" },
-		startDate: "May 2021",
-		endDate: "September 2022",
-		points: [
-			"Led Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missions",
-			"Designed & deployed a Kubernetes-scaled AI material prediction feature for Ericsson Indoor Planner to predict user-uploaded floorplan's materials",
-			"Developed and create tests of new features for Ericsson Indoor Planner's backend API in C#",
-		],
-	},
-	{
 		title: "AI & Computer Vision Developer",
 		company: { name: "Queen's AutoDrive Team", url: "https://autodrive.engineering.queensu.ca/" },
 		startDate: "Sept 2021",
 		endDate: "Present",
 		points: [
-			"Develop the team's Traffic Light Classifier ROS node for use in the SAE AD Challenge",
-			"Architected a documentation pipeline for the team's Perception Python library",
-			"Deployed the team's website and a work breakdown structure tool using the JIRA API",
+			"Design and implement 2D perception systems using ROS for use in our autonomous vehicle for the SAE AutoDrive II Challenge",
+			"Architected a documentation pipeline for the team’s perception Python library",
+			"Developed the team’s website in Next.js and a work breakdown structure tool using the JIRA API",
 		],
 	},
 	{
+		title: "Software Development Intern",
+		company: { name: "Ericsson", url: "https://www.ericsson.com/" },
+		startDate: "May 2021",
+		endDate: "August 2022",
+		points: [
+			"Led Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missionsLed Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missions. Now used by volunteers around the world",
+			"Designed & deployed a Kubernetes-scaled AI material prediction feature for Ericsson Indoor Planner to predict user-uploaded floorplan's materialsesigned & deployed a Kubernetes-scaled AI material prediction feature in Azure for Ericsson Indoor Planner to predict user-uploaded floorplan's materials",
+			"Developed and created unit tests of new features for Ericsson Indoor Planner's backend API in C#",
+		],
+	},
+
+	{
 		title: "Software Developer Co-op",
 		company: {
-			name: "Kings Distributed Systems",
+			name: "Distributive",
 			url: "https://kingsds.network/",
 		},
 		startDate: "July 2020",
 		endDate: "April 2021",
 		points: [
 			"Led Full-stack development on Looking Glass project, implementing a feature for predicting & visualizing COVID cases based on Ontario lockdown scenarios by city",
-			"Architected a documentation pipeline for the team's Perception Python library",
-			"Architected & implemented a solution for initialization of different compute worker environments in Node & vanilla web JavaScript. Now in production on a network of thousands of different computers with heterogenous compute capability",
+			"Architected & implemented a solution for initialization of different compute worker environments in Node & vanilla web JavaScript environments. Now in production on a network of thousands of different computers with heterogenous compute capability",
 		],
 	},
 	{
@@ -115,9 +115,8 @@ export const experience: Experience[] = [
 		startDate: "May 2019",
 		endDate: "May 2021",
 		points: [
-			"Led the operations of a 50+ member campus design team to build 6 robots to compete in the 2021 DJI International Robomaster competition in Shenzhen, China",
-			"Successfully trained and deployed a custom object detection model using Tensorflow, SSD MobileNetV2, Python & OpenCV to detect enemy robot armour",
-			"Planned and led weekly team workshops for 20+ members, working toward the implementation of our plate detection model on a Nvidia Jetson Nano",
+			"Led the operations of a 50+ member campus design team to build 6 robots to compete in the 2021 DJI International Robomaster competition in Shenzhen, ChinaLed the operations of a 50+ member design team to build 6 robots to compete in the 2021 DJI International Robomaster competition in Shenzhen, China",
+			"Successfully led a team of 20+ members to train and integrate a custom object detection model using Tensorflow, SSD MobileNetV2, Python & OpenCV for detection and aiming at enemy robot armour plates",
 		],
 	},
 	{
@@ -129,8 +128,8 @@ export const experience: Experience[] = [
 		startDate: "May 2020",
 		endDate: "April 2021",
 		points: [
-			"Redesigned and developed the cucai.ca website using React and Gatsby",
-			"Created branding guidelines, marketing material, and design plans using Figma to advertise North America's largest undergraduate AI conference",
+			"Redesigned and developed the cucai.ca website using React and GatsbyRedesigned and developed the 2021.cucai.ca website using React and Gatsby",
+			"Created branding guidelines, marketing material, and design plans using Figma to advertise North America's largest undergraduate AI conferenceCreated branding guidelines, marketing material, and design plans using Figma to advertise North America’s largest undergraduate AI conference",
 		],
 	},
 ];
