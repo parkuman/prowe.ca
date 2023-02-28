@@ -17,7 +17,7 @@
 	</ul>
 	<ul class="right">
 		<li>
-			<a href="mailto:parker.a.rowe@gmail.com">parker.a.rowe@gmail.com</a>
+			<a href="mailto:parker@prowe.ca">parker@prowe.ca</a>
 		</li>
 	</ul>
 	<section>
