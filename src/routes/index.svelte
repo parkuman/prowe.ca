@@ -18,7 +18,7 @@
 <section class="hero">
 	<h1>Parker Rowe</h1>
 	<h2>Engineer, Developer</h2>
-	<p>A Computer Engineering Student based in Ontario, Canada 🇨🇦.</p>
+	<p>A Computer Engineer based in Ontario, Canada 🇨🇦.</p>
 	<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
 	<br />
 	<a target="_blank" href="/prowe_resume.pdf">
@@ -31,8 +31,7 @@
 	<img src="/images/profile.webp" alt="pic of me :)" />
 
 	<p>
-		I'm Parker, a computer engineering student and software developer. I am now in my 4th and final year
-		of Computer Engineering specialized in Entreprenuership & Innovation @ Queen's University.
+		I'm Parker, a computer engineer and software developer. I'm currently working freelance building great web experiences!
 		<br />
 		<br />
 		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and

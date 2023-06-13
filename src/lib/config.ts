@@ -71,14 +71,25 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
 	{
+		title: "Software Developer",
+		company: { name: "Freelance", url: "https://prowe.ca/" },
+		startDate: "April 2023",
+		endDate: "Present",
+		points: [
+			"Develop and deploy websites for clients, showcasing proficiency in various full-stack environments and build tools, in addition to vanilla HTML, CSS, and JavaScript",
+			"Collaborate closely with clients to understand their business objectives and translate those into intuitive, and performant web experiences.",
+			"Proactively practice with emerging web technologies, continuously expanding technical knowledge, allowing for innovative new solutions to benefit the end-user.",
+		],
+	},
+	{
 		title: "AI & Computer Vision Developer",
 		company: { name: "Queen's AutoDrive Team", url: "https://autodrive.engineering.queensu.ca/" },
 		startDate: "Sept 2021",
-		endDate: "Present",
+		endDate: "April 2023",
 		points: [
-			"Design and implement 2D perception systems using ROS for use in our autonomous vehicle for the SAE AutoDrive II Challenge",
-			"Architected a documentation pipeline for the team’s perception Python library",
-			"Developed the team’s website in Next.js and a work breakdown structure tool using the JIRA API",
+			"Designed and implemented 2D traffic light classification systems using ROS and Tensorflow for use in our autonomous vehicle for the SAE AutoDrive II Challenge",
+			"Architected a GitHub actions documentation pipeline for the team's Python library.",
+			"Developed the team's website in Next.js and a work breakdown structure tool using the JIRA API",
 		],
 	},
 	{
@@ -87,23 +98,24 @@ export const experience: Experience[] = [
 		startDate: "May 2021",
 		endDate: "August 2022",
 		points: [
-			"Led Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missionsLed Full-stack development of a new VPN certificate system using React, NextJS, Docker, and OpenVPN, for Ericsson Response and the UN to securely manage access to networks during disaster relief missions. Now used by volunteers around the world",
-			"Designed & deployed a Kubernetes-scaled AI material prediction feature for Ericsson Indoor Planner to predict user-uploaded floorplan's materialsesigned & deployed a Kubernetes-scaled AI material prediction feature in Azure for Ericsson Indoor Planner to predict user-uploaded floorplan's materials",
-			"Developed and created unit tests of new features for Ericsson Indoor Planner's backend API in C#",
+			"Volunteered to lead full-stack development of a new VPN certificate system using TypeScript, React, NextJS, Docker, OpenVPN, and tested with Cypress. Our team of 4 interns developed a web app that allows Ericsson Response and the UN to securely manage access to private networks during disaster relief missions. Now used by Ericsson Response and UN Volunteers around the world.",
+			"Designed, documented, and deployed a Kubernetes-scaled AI material prediction feature in Azure for Indoor Planner to predict floorplan materials given an image.",
+			"Developed and unit tested new features for Ericsson Indoor Planner's .NET API.",
+			"Doubled multithreaded performance of a Java RPC-based API"
 		],
 	},
 
 	{
-		title: "Software Developer Co-op",
+		title: "Software Development Intern",
 		company: {
 			name: "Distributive",
-			url: "https://kingsds.network/",
+			url: "https://distributive.network/",
 		},
 		startDate: "July 2020",
 		endDate: "April 2021",
 		points: [
-			"Led Full-stack development on Looking Glass project, implementing a feature for predicting & visualizing COVID cases based on Ontario lockdown scenarios by city",
-			"Architected & implemented a solution for initialization of different compute worker environments in Node & vanilla web JavaScript environments. Now in production on a network of thousands of different computers with heterogenous compute capability",
+			"Led full stack development on a using TypeScript, Node, and GraphQL, implementing a feature for predicting & visualizing COVID case based on Ontario lockdown levels.",
+			"Architected & implemented a solution for initialization of different web workers for Node & browser JavaScript runtimes. Now in production on a network of thousands of different computers with heterogenous compute capability.",
 		],
 	},
 	{

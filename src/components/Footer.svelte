@@ -23,7 +23,7 @@
 	<section>
 		<a
 			target="_blank"
-			href="https://github.com/parkuman/svelte-kit-test"
+			href="https://github.com/parkuman/prowe.ca"
 			title="visit this project on GitHub">Made with <Icon name="heart" /> by Parker Rowe</a
 		>
 	</section>
