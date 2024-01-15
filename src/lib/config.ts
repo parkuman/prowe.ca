@@ -71,6 +71,16 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
 	{
+		title: "Software Development Engineer in Test (SDET)",
+		company: { name: "Acre Software", url: "https://www.acresoftware.com/" },
+		startDate: "September 2023",
+		endDate: "Present",
+		points: [
+			"Helping to build the future of mortages in the UK 🇬🇧",
+			"Develop a group of maintainable and reliable end-to-end tests for Acre's client portal and CRM portal using Cypress",
+		],
+	},
+	{
 		title: "Software Developer",
 		company: { name: "Freelance", url: "https://prowe.ca/" },
 		startDate: "April 2023",

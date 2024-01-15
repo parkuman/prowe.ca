@@ -18,7 +18,7 @@
 <section class="hero">
 	<h1>Parker Rowe</h1>
 	<h2>Engineer, Developer</h2>
-	<p>A Computer Engineer based in Ontario, Canada 🇨🇦.</p>
+	<p>A Canadian Computer Engineer living in London, UK. 🇬🇧</p>
 	<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
 	<br />
 	<a target="_blank" href="/prowe_resume.pdf">
@@ -31,7 +31,7 @@
 	<img src="/images/profile.webp" alt="pic of me :)" />
 
 	<p>
-		I'm Parker, a computer engineer and software developer. I'm currently working freelance building great web experiences!
+		I'm Parker, a computer engineer and software developer. I'm currently helping build the future of mortgage software at Acre Software!
 		<br />
 		<br />
 		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and
