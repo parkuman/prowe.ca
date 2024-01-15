@@ -1,15 +1,14 @@
 // returns the total amount of blog post views for the whole site
-
-import prisma from "$lib/db";
+import pb from "$lib/db";
 
 export const GET = async () => {
-	const allViews = await prisma.views.aggregate({
-		_sum: {
-			count: true,
-		},
-	});
+	const allViewRecords = await pb.collection("views").getFullList();
+	const totalViews: number = allViewRecords.reduce(
+		(accumulator, currentValue) => accumulator + currentValue.count,
+		0,
+	);
 
 	return {
-		body: allViews._sum.count.toString(),
+		body: totalViews.toString(),
 	};
 };

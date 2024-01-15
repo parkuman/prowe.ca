@@ -24,7 +24,6 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "prisma": "^4.2.1",
     "svelte": "^3.44.0",
     "svelte-check": "^2.2.6",
     "svelte-preprocess": "^4.10.1",
@@ -35,8 +34,8 @@
   "type": "module",
   "dependencies": {
     "@notionhq/client": "^1.0.2",
-    "@prisma/client": "^4.2.1",
     "notion-to-md": "github:parkuman/notion-to-md",
+    "pocketbase": "^0.20.3",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-highlight": "^5.0.2",
     "rehype-slug": "^5.0.1",

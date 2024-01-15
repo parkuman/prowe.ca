@@ -1,6 +1,5 @@
-import PrismaClientPkg from "@prisma/client";
-const PrismaClient = PrismaClientPkg.PrismaClient;
+import PocketBase from "pocketbase";
 
-const prisma = new PrismaClient();
+const pb = new PocketBase("https://arc.prowe.ca/pb");
 
-export default prisma;
+export default pb
