@@ -111,7 +111,7 @@ export const experience: Experience[] = [
 			"Volunteered to lead full-stack development of a new VPN certificate system using TypeScript, React, NextJS, Docker, OpenVPN, and tested with Cypress. Our team of 4 interns developed a web app that allows Ericsson Response and the UN to securely manage access to private networks during disaster relief missions. Now used by Ericsson Response and UN Volunteers around the world.",
 			"Designed, documented, and deployed a Kubernetes-scaled AI material prediction feature in Azure for Indoor Planner to predict floorplan materials given an image.",
 			"Developed and unit tested new features for Ericsson Indoor Planner's .NET API.",
-			"Doubled multithreaded performance of a Java RPC-based API"
+			"Doubled multithreaded performance of a Java RPC-based API",
 		],
 	},
 
@@ -162,7 +162,6 @@ export const technologies = [
 	"Svelte",
 	"React",
 	"Python",
-	"NextJS",
 	"OpenCV",
 	"WebAssembly",
 	"Love<3",
