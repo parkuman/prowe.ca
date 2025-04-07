@@ -77,7 +77,10 @@ export const experience: Experience[] = [
 		endDate: "Present",
 		points: [
 			"Helping to build the future of mortages in the UK 🇬🇧",
-			"Develop a group of maintainable and reliable end-to-end tests for Acre's client portal and CRM portal using Cypress",
+			"Build and maintain reliable CI/CD/CT pipelines to test a myriad of microservices",
+			"Built and communicated a new system and process for flaky test management; succesffully reducing daily flakes from over 100 to just 5 per day.",
+			"Spearheaded, planned, and implemented the migration from Cypress to Playwright for the company's E2E test suite",
+			"Developed a selective test running system to save time and resources running E2E tests in CI.",
 		],
 	},
 	{
