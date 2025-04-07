@@ -15,36 +15,30 @@
 
 <Head />
 
+<!-- Hero Section - Left-aligned with image on the right -->
 <section class="hero">
-	<h1>Parker Rowe</h1>
-	<h2>Engineer, Developer</h2>
-	<p>A Canadian Computer Engineer. 🇨🇦</p>
-	<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
-	<br />
-	<a target="_blank" href="/prowe_resume.pdf">
-		<button class="styled-btn">RESUME</button>
-	</a>
+	<div class="hero-content">
+		<div class="hero-text">
+			<h1>Parker Rowe</h1>
+			<h2>Engineer, Developer</h2>
+			<p>Proud Canadian Computer Engineer. 🇨🇦</p>
+			<p>I build things with&nbsp;&nbsp;<span><ItemSpinner items={technologies} /></span></p>
+			<br />
+			<a target="_blank" href="/prowe_resume.pdf">
+				<button class="styled-btn">RESUME</button>
+			</a>
+		</div>
+		<div class="hero-image-container">
+			<img src="/images/profile.webp" alt="pic of me :)" class="hero-image" />
+		</div>
+	</div>
+
+	<div class="scroll-indicator">
+		<div class="chevron" />
+	</div>
 </section>
 
-<h1 class="section-header">About Me</h1>
-<section class="about">
-	<img src="/images/profile.webp" alt="pic of me :)" />
-
-	<p>
-		I'm Parker, a computer engineer and software developer. I'm currently helping build the future
-		of mortgage software at Acre Software!
-		<br />
-		<br />
-		My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding, and
-		making memories with friends.
-		<br />
-		<br />
-		<span class="top-tracks-wrapper">
-			<TopTracks />
-		</span>
-	</p>
-</section>
-
+<!-- Work Experience Section -->
 <section class="experience">
 	<h1 class="section-header">Where I've Worked</h1>
 	<div class="experience-wrapper">
@@ -82,7 +76,8 @@
 	</div>
 </section>
 
-<section class="more">
+<!-- Projects Section -->
+<section class="projects">
 	<h1 class="section-header">My Work</h1>
 	<p>
 		Please feel free to check out some of my work or my Blog where I post about things I've been
@@ -94,6 +89,26 @@
 	</p>
 </section>
 
+<!-- About Me with Spotify Section -->
+<section class="about">
+	<h1 class="section-header">About Me</h1>
+	<div class="about-content">
+		<div class="about-text">
+			<p>
+				I'm Parker, a computer engineer and software developer. I'm currently helping build the
+				future of mortgage software at Acre Software!
+				<br />
+				<br />
+				My favourite ways to spend my free time are camping, playing guitar, running, climbing, coding,
+				and making memories with friends.
+			</p>
+		</div>
+		<div class="spotify-section">
+			<TopTracks />
+		</div>
+	</div>
+</section>
+
 <style>
 	section {
 		min-height: 40vh;
@@ -101,21 +116,49 @@
 		margin-bottom: 100px;
 	}
 
+	/* Hero Section Styles */
 	.hero {
 		min-height: calc(100vh - 104px - 104px);
 		margin-top: 100px;
 		letter-spacing: 0.1em;
+		position: relative;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+	.hero-text {
+		text-align: left;
+		max-width: 60%;
+	}
+
+	.hero-image-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-image {
+		width: 300px;
+		height: 300px;
+		padding: 5px;
+		border: 1px var(--color-primary) solid;
+		border-radius: 50%;
 	}
 
 	.hero p {
-		max-width: 50%;
+		max-width: 100%;
 	}
+
 	.hero h1 {
-		align-self: center;
-		/* text-transform: uppercase; */
-		/* font-size: calc(4vw + 4vh); */
 		font-size: 2.5rem;
 		line-height: 2.5rem;
+		margin-bottom: 10px;
 	}
 
 	.hero h2 {
@@ -123,19 +166,11 @@
 		line-height: 1.75rem;
 		font-weight: 400;
 		color: rgba(var(--color-text-rgb), 0.6);
-		/* font-size: calc(1vw + 1vh); */
 		font-family: var(--font-mono);
+		margin-bottom: 15px;
 	}
 
-	.hero h3 {
-		font-size: calc(0.8vw + 0.8vh);
-		margin-top: 20px;
-	}
-
-	.hero h3 > span {
-		font-family: var(--font-mono);
-	}
-
+	/* Section Headers */
 	h1.section-header {
 		font-size: calc(1.7vw + 1.7vh);
 		display: flex;
@@ -154,32 +189,7 @@
 		background-color: rgba(var(--color-text-rgb), 0.5);
 	}
 
-	.about {
-		display: grid;
-		grid-template-columns: 3fr 1fr;
-		grid-template-areas: "about-content about-image";
-		gap: 50px;
-	}
-
-	.about > p {
-		grid-area: about-content;
-	}
-
-	.about > img {
-		padding: 5px;
-		max-width: 100%;
-		border: 1px var(--color-primary) solid;
-		border-radius: 50%;
-	}
-
-	.about .top-tracks-wrapper {
-		max-width: 50px;
-	}
-
-	.about img {
-		grid-area: about-image;
-	}
-
+	/* Experience Section Styles */
 	.experience {
 		max-width: 1200px;
 	}
@@ -280,33 +290,104 @@
 		color: var(--color-primary);
 	}
 
-	.more {
+	/* Projects Section */
+	.projects {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* About Section Styles */
+	.about {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.about-content {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.about-text {
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
+	.scroll-indicator {
+		position: absolute;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		animation: bounce 2s infinite;
+	}
+
+	.chevron {
+		width: 20px;
+		height: 20px;
+		border-style: solid;
+		border-width: 0 3px 3px 0;
+		display: inline-block;
+		transform: rotate(45deg);
+		border-color: var(--color-primary);
+		opacity: 20%;
+	}
+
+	@keyframes bounce {
+		0%,
+		20%,
+		50%,
+		80%,
+		100% {
+			transform: translateX(-50%) translateY(0);
+		}
+		40% {
+			transform: translateX(-50%) translateY(-10px);
+		}
+		60% {
+			transform: translateX(-50%) translateY(-5px);
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.scroll-indicator {
+			bottom: 20px;
+		}
 	}
 
 	@media only screen and (max-width: 1200px) {
-		.hero p {
+		.hero-content {
+			flex-direction: column-reverse;
+			text-align: left;
+			align-items: flex-start;
+		}
+
+		.hero-image-container {
+			align-self: flex-start;
+		}
+
+		.hero-text {
 			max-width: 100%;
+			margin-top: 30px;
 		}
-	}
 
-	@media only screen and (max-width: 1200px) {
-		section.about {
-			display: block;
+		.hero-image {
+			width: 200px;
+			height: 200px;
 		}
+
 		h1.section-header::after {
 			width: 70%;
 		}
 
-		.about {
-			grid-template-areas: "about-image about-content";
+		.about-content {
 			grid-template-columns: 1fr;
-			grid-template-rows: auto 1fr;
 		}
 
-		.about img {
-			display: block;
-			max-width: 50%;
-			margin: 50px auto;
+		.spotify-section {
+			margin-top: 30px;
 		}
 
 		.experience-wrapper {
@@ -320,6 +401,13 @@
 
 		.experience {
 			max-width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.hero-image {
+			width: 150px;
+			height: 150px;
 		}
 	}
 </style>
