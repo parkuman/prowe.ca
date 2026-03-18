@@ -69,7 +69,7 @@ const xml = (
           ${pubDate(new Date(postFrontmatter.date))}
         </pubDate>
         ${postFrontmatter.image ? `<media:thumbnail url="${metadata.baseUrl}${postFrontmatter.image}"/>` : ""}
-        <content:encoded><![CDATA[<div style="margin-top: 50px; font-style: italic;"><strong><a href="${metadata.baseUrl}/blog/${postFrontmatter.slug}">Keep reading</a>.</strong></div>]]></content:encoded>
+        <content:encoded><![CDATA[<p>${postFrontmatter.summary}</p><p><a href="${metadata.baseUrl}/blog/${postFrontmatter.slug}">Continue reading →</a></p>]]></content:encoded>
       </item>
     `,
 		)
