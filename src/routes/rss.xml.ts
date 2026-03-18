@@ -37,7 +37,7 @@ export async function GET() {
 
 const xml = (
 	postFrontmatters: PostFrontmatter[],
-) => `<rss xmlns:dc="https://purl.org/dc/elements/1.1/" xmlns:content="https://purl.org/rss/1.0/modules/content/" xmlns:atom="https://www.w3.org/2005/Atom" version="2.0">
+) => `<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
 <channel>
   <title>
     <![CDATA[ Parker Rowe's Blog! ]]>
@@ -47,7 +47,7 @@ const xml = (
   </description>
   <link>${metadata.baseUrl}</link>
   <generator>RSS for Node</generator>
-  <lastBuildDate>${new Date()}</lastBuildDate>
+  <lastBuildDate>${pubDate(new Date())}</lastBuildDate>
   <atom:link href="${metadata.baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
   ${postFrontmatters
 		.map(
@@ -68,15 +68,8 @@ const xml = (
         <pubDate>
           ${pubDate(new Date(postFrontmatter.date))}
         </pubDate>
-        <content:encoded>
-          <div style="margin-top: 50px; font-style: italic;">
-            <strong>
-              <a href="${metadata.baseUrl}/blog/${postFrontmatter.slug}">
-                Keep reading
-              </a>.
-            </strong>  
-          </div>
-        </content:encoded>
+        ${postFrontmatter.image ? `<media:thumbnail url="${metadata.baseUrl}${postFrontmatter.image}"/>` : ""}
+        <content:encoded><![CDATA[<div style="margin-top: 50px; font-style: italic;"><strong><a href="${metadata.baseUrl}/blog/${postFrontmatter.slug}">Keep reading</a>.</strong></div>]]></content:encoded>
       </item>
     `,
 		)
