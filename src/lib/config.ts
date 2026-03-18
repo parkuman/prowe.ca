@@ -71,10 +71,17 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
 	{
+		title: "Software Engineer",
+		company: { name: "CircleCI", url: "https://circleci.com/" },
+		startDate: "September 2025",
+		endDate: "Present",
+		points: [],
+	},
+	{
 		title: "Software Development Engineer in Test (SDET)",
 		company: { name: "Acre Software", url: "https://www.acresoftware.com/" },
 		startDate: "September 2023",
-		endDate: "Present",
+		endDate: "September 2025",
 		points: [
 			"Helping to build the future of mortages in the UK 🇬🇧",
 			"Build and maintain reliable CI/CD/CT pipelines to test a myriad of microservices",
